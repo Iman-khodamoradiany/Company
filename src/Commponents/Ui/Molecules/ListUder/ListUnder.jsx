@@ -10,7 +10,7 @@ function ListUnder() {
         <div className="flex items-center justify-between flex-col gap-20 py-[20px] px-[30px] bg-[#F9F9F9] border-[1px] rounded-[12px] border-[#E1E1E1] ">
           <div className="w-full flex flex-col items-center justify-between gap-5 ">
             <div className="w-full flex items-center justify-center ">
-              <Img src={item.img} className="" />
+              <Img src={item.img}  />
             </div>
             <Text style="text-center text-[#353535] font-bold text-[1.5vw] ">
               {item.text1}
