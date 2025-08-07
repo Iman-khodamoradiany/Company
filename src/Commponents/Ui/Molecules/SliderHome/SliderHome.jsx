@@ -1,0 +1,53 @@
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import Text from "../../Atom/Text/Text";
+import Img from "../../Atom/Img/Img";
+import { AraySlider } from "./../../../Constans/SliderHome/SliderHome";
+import Icon from "./../../Atom/Icon/Icon";
+import useTuncateText from "./../../../HOC/Text/Text";
+
+function SliderHome() {
+ 
+  
+
+  return (
+    <div className="flex items-center w-full justify-center  ">
+      <div className="custom-prev w-[52px] h-[52px] relative left-[30px] z-10  shadow-[0px_3px_10px_0px_#00000033]  bg-[#FFFFFF] rounded-full flex items-center justify-center   cursor-pointer">
+        <Icon Name="Next" />
+      </div>
+
+      <Swiper
+        modules={[Navigation]}
+        slidesPerView={4}
+        spaceBetween={20}
+        loop={true}
+        navigation={{
+          prevEl: ".custom-prev",
+        }}
+        className="w-full h-[300px]  "
+      >
+        {AraySlider.map((item) => (
+          <SwiperSlide
+            key={item.id}
+            className=" bg-[#F9F9F9] rounded-[10px] border-[#E1E1E1]  border-[1px]  "
+          >
+            <div
+              dir="rtl"
+              className="w-full gap-[20px] flex flex-col items-center justify-between"
+            >
+              <Img
+                src={item.img}
+                className="w-full h-[200px] rounded-t-[10px]"
+              />
+              <Text style="text-[1.2vw] text-[#505050] font-bold "> {useTuncateText(item.text,55)}</Text>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
+  );
+}
+
+export default SliderHome;
