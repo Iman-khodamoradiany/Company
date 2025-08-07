@@ -1,0 +1,8 @@
+@font-face {
+    font-family: HORIZONTAL;
+    src: url(../public/horizontal.ttf);
+}
+
+p{
+    font-family: HORIZONTAL;
+}

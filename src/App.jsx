@@ -1,14 +1,19 @@
-import BoxCouncil from "./Commponents/Ui/Organisms/BoxCouncil/BoxCouncil"
-import HomeList from "./Commponents/Ui/Organisms/HomeList/HomeList"
-import ListO from "./Commponents/Ui/Organisms/ListUnder/ListO"
+import Layout from "./Commponents/Partial/Layout"
+import HomePage from "./Pages/HomePage/HomePage"
+import { Route, Routes } from "react-router"
 
 function App() {
 
   return (
     <>
-    <ListO/>
-    <HomeList/>
-    <BoxCouncil/>
+
+      <Layout>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/But" element={<h1>iman</h1>} />
+        </Routes>
+      </Layout>
+
     </>
   )
 }
