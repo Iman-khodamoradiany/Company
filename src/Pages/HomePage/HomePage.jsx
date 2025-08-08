@@ -4,6 +4,7 @@ import Header from "../../Commponents/Ui/Organisms/Header/Header";
 import ListO from './../../Commponents/Ui/Organisms/ListUnder/ListO';
 import HomeList from './../../Commponents/Ui/Organisms/HomeList/HomeList';
 import BoxCouncil from './../../Commponents/Ui/Organisms/BoxCouncil/BoxCouncil';
+import Slider from './../../Commponents/Ui/Organisms/Slider/Slider';
 function HomePage() {
   return (
     <>
@@ -16,6 +17,7 @@ function HomePage() {
         <ListO />
         <HomeList />
         <BoxCouncil />
+        <Slider/>
       </section>
     </>
   );
