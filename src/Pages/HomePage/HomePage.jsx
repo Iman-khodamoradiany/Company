@@ -5,7 +5,9 @@ import ListO from './../../Commponents/Ui/Organisms/ListUnder/ListO';
 import HomeList from './../../Commponents/Ui/Organisms/HomeList/HomeList';
 import BoxCouncil from './../../Commponents/Ui/Organisms/BoxCouncil/BoxCouncil';
 import Slider from './../../Commponents/Ui/Organisms/Slider/Slider';
+import ListUnderRent from "../../Commponents/Ui/Organisms/ListRent/ListUnderRent";
 function HomePage() {
+
   return (
     <>
       <header className="h-[100vh] w-full bg-contain lg:bg-cover bg-[url(/Background/Photo.png)] bg-cover bg-no-repeat relative w-full flex justify-start items-end">
@@ -14,10 +16,11 @@ function HomePage() {
       </header>
       
       <section>
-        <ListO />
+        {/* <ListO />
         <HomeList />
         <BoxCouncil />
-        <Slider/>
+        <Slider/> */}
+        <ListUnderRent/>
       </section>
     </>
   );
