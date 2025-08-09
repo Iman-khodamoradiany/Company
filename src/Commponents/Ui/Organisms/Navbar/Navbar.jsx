@@ -1,6 +1,7 @@
 import Icon from "../../Atom/Icon/Icon"
 import Ul from "../../Molecules/Ul/Li"
 import Button from "../../Atom/Button/Button"
+import './Navbar.css'
 function Navbar() {
     const list = [
         { to: '/', title: 'اجاره' },
@@ -16,7 +17,7 @@ function Navbar() {
             </div>
             <div className="flex justify-center items-center gap-10 w-1/2 lg:w-[75%] lg:justify-start">
                 <Icon style={'w-[100px]'} Name={"Logo"}></Icon>
-                <Ul style={' hidden lg:flex justify-center items-center gap-6 text-[#505050] font-bold'} items={list} Fal={true}></Ul>
+                <Ul style={' hidden lg:flex justify-center items-center gap-6 text-[#505050] Navbarli'} items={list} Fal={true}></Ul>
             </div>
             <div className="flex justify-end gap-8 font-bold w-[25%]">
                 <Button style={'text-[1.2vw] text-[#505050]'}>ورود</Button>
