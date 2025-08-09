@@ -5,6 +5,7 @@ import ListO from './../../Commponents/Ui/Organisms/ListUnder/ListO';
 import HomeList from './../../Commponents/Ui/Organisms/HomeList/HomeList';
 import BoxCouncil from './../../Commponents/Ui/Organisms/BoxCouncil/BoxCouncil';
 import Slider from './../../Commponents/Ui/Organisms/Slider/Slider';
+import BoxRent from "../../Commponents/Ui/Organisms/BoxRent/BoxRent";
 function HomePage() {
   return (
     <>
@@ -14,10 +15,11 @@ function HomePage() {
       </header>
       
       <section>
-        <ListO />
+        {/* <ListO />
         <HomeList />
         <BoxCouncil />
-        <Slider/>
+        <Slider/> */}
+        <BoxRent/>
       </section>
     </>
   );
