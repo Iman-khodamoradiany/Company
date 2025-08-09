@@ -21,8 +21,8 @@ function HomePage() {
         <HomeList />
         <BoxCouncil />
         <Slider/> */}
-        <BoxRent/>
         <ListUnderRent/>
+        <BoxRent/>
       </section>
     </>
   );
