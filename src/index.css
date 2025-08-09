@@ -4,9 +4,17 @@
 
 @font-face {
     font-family: HORIZONTAL;
-    src: url(../public/horizontal.ttf);
+    src: url(../public/Font/Shabnam-FD-WOL.ttf);
 }
 
-p{
+p {
+    font-family: HORIZONTAL;
+}
+
+a {
+    font-family: HORIZONTAL;
+}
+
+button {
     font-family: HORIZONTAL;
 }

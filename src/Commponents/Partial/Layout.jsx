@@ -1,3 +1,4 @@
+import Footer from "../Ui/Organisms/Footer/Footer"
 import Navbar from "../Ui/Organisms/Navbar/Navbar"
 
 function Layout({children}) {
@@ -5,7 +6,7 @@ function Layout({children}) {
         <>
             <Navbar></Navbar>
             <main>{children}</main>
-            <footer>footer</footer>
+            <Footer />
         </>
     )
 }

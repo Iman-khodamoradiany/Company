@@ -1,8 +1,8 @@
 import { Link } from "react-router"
 
-function LinkPage({To , children}){
+function LinkPage({To , children , style}){
     return(
-        <Link to={To}>{children}</Link>
+        <Link className={style} to={To}>{children}</Link>
     )
 }
 export default LinkPage
