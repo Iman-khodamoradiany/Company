@@ -4,6 +4,7 @@ import Search from "./Icons/Search/Search";
 import Next from "./Icons/Next/Next";
 import Pine from "./Icons/Pine/Pine";
 import PineActiv from './Icons/PineActiv/PineActiv';
+import TikeBlue from "./Icons/TikeBlue/TikeBlue";
 
 function Icon({ Name }) {
   switch (Name) {
@@ -19,6 +20,8 @@ function Icon({ Name }) {
       return <Pine />;
     case "PineActiv":
       return <PineActiv />;
+    case "TikeBlue":
+      return <TikeBlue />;
   }
 }
 export default Icon;

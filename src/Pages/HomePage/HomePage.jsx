@@ -7,6 +7,9 @@ import BoxCouncil from './../../Commponents/Ui/Organisms/BoxCouncil/BoxCouncil';
 import Slider from './../../Commponents/Ui/Organisms/Slider/Slider';
 import BoxRent from "../../Commponents/Ui/Organisms/BoxRent/BoxRent";
 import ListUnderRent from "../../Commponents/Ui/Organisms/ListRent/ListUnderRent";
+import Suggested from "../../Commponents/Ui/Organisms/Suggested/Suggested";
+import SliderRents from "../../Commponents/Ui/Organisms/SliderRents/SliderRents";
+import SliderUsers from "../../Commponents/Ui/Organisms/SliderUsers/SliderUsers";
 function HomePage() {
 
   return (
@@ -23,6 +26,9 @@ function HomePage() {
         <Slider/> */}
         <ListUnderRent/>
         <BoxRent/>
+        <Suggested/>
+        <SliderRents/>
+        <SliderUsers/>
       </section>
     </>
   );
