@@ -5,14 +5,13 @@ import Button from "./../../Atom/Button/Button";
 import Text from "./../../Atom/Text/Text";
 
 function ListRentM() {
-  
   const [pine, setpine] = useState({});
-  const pineActive=(id)=>{
-    setpine((prev)=>({
+  const pineActive = (id) => {
+    setpine((prev) => ({
       ...prev,
-      [id]:!prev[id]
-    }))
-  }
+      [id]: !prev[id],
+    }));
+  };
 
   return (
     <div className="w-full grid grid-cols-4 gap-[20px]    ">
@@ -31,15 +30,15 @@ function ListRentM() {
               <Button OnClick={() => pineActive(item.id)}>
                 <Icon Name={pine[item.id] ? "PineActiv" : "Pine"} />
               </Button>
-              <Text style="[direction:rtl] text-[#909090] text-[1.1vw] font-bold   ">
+              <Text style="[direction:rtl] text-[#909090] text-[1.1vw]    ">
                 {item.text}
               </Text>
             </div>
-            <Text style="[direction:rtl] text-[#505050] text-[1.29vw] font-bold ">
+            <Text style="[direction:rtl] text-[#505050] text-[1.1vw]  ">
               {item.number1}
             </Text>
             <div>
-              <Text style="[direction:rtl] text-[#353535] text-[1.2vw] font-bold ">
+              <Text style="[direction:rtl] text-[#353535] text-[1.1vw] font-bold ">
                 {item.number2}
               </Text>
               <Text style="[direction:rtl] text-[#353535] text-[1vw] font-bold ">

@@ -39,10 +39,10 @@ function SliderOptionLeft() {
                   {item.name}
                 </Text>
               </div>
-              <Text style="text-[#353535] text-[1.2vw] font-bold text-center ">
+              <Text style="text-[#353535] text-[1.2vw]  text-center ">
                 {item.text}
               </Text>
-              <div className="text-[#717171] text-[1.1vw] font-bold text-center flex flex-col gap-4 ">
+              <div className="text-[#717171] text-[1.1vw]  text-center flex flex-col gap-4 ">
                 <Text>{item.number1}</Text>
                 <Text>{item.number2}</Text>
                 <Text>{item.number3}</Text>

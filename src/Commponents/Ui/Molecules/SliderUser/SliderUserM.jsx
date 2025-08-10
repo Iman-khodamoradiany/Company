@@ -29,8 +29,8 @@ function SliderUserM() {
               </div>
               <div className="">
                 <Text style="text-[1.8vw] text-[#212121]  text-center font-bold " >{item.name}</Text>
-                <Text style="text-[1.3vw] text-[#717171]  text-center font-bold " >{item.address}</Text>
-                <Text style="text-[1.3vw] text-[#717171]  text-center font-bold " >{item.reng}</Text>
+                <Text style="text-[1.3vw] text-[#717171]  text-center  " >{item.address}</Text>
+                <Text style="text-[1.3vw] text-[#717171]  text-center  " >{item.reng}</Text>
                 <Button style="border-[#CB1B1B] font-bold border-[2px] text-[#CB1B1B] text-center py-[10px] px-[30px] rounded-[8px]  " >نمایش پروفایل</Button>
               </div>
             </div>
