@@ -9,7 +9,7 @@ import Button from "./../../Atom/Button/Button";
 function SliderUserM() {
   return (
     <div className="w-full flex items-center justify-center">
-      <div className="custom-prev2 w-[60px] h-[60px] absolute left-[90px] z-10  shadow-[0px_3px_10px_0px_#00000033]  bg-[#FFFFFF] rounded-full flex items-center justify-center   cursor-pointer">
+      <div className="custom-prev2 w-[60px] h-[60px] absolute left-[40px] z-10  shadow-[0px_3px_10px_0px_#00000033]  bg-[#FFFFFF] rounded-full flex items-center justify-center   cursor-pointer">
         <Icon Name="Next" />
       </div>
       <Swiper
