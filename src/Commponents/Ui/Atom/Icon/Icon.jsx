@@ -7,6 +7,8 @@ import Search from "./Icons/Search/Search";
 import Next from './Icons/Next/Next';
 import Telegram from "./Icons/Telegram/Telegram";
 import BigLogo from "./Icons/BigLogo/BigLogo";
+import Clock from "./Icons/Clock/Clock";
+import Profile from "./Icons/Profile/Profile";
 function Icon({ Name, style }) {
     switch (Name) {
         case 'Logo':
@@ -27,6 +29,10 @@ function Icon({ Name, style }) {
             return <Telegram />
         case "BigLogo":
             return <BigLogo />
+        case "Clock": 
+            return <Clock />
+        case "Profile":
+            return <Profile />
     }
 }
 export default Icon;

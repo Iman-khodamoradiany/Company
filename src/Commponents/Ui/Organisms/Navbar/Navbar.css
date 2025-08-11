@@ -16,3 +16,10 @@
 .Navbarli a:hover:after{
     width: 100%;
 }
+
+.Navbarli a:focus::after{
+    width: 100%;
+}
+.Navbarli a:focus{
+    color: red;
+}

@@ -18,3 +18,10 @@ a {
 button {
     font-family: HORIZONTAL;
 }
+
+@layer components {
+    .Remove_Icon {
+        @apply [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none;
+    }
+}
+

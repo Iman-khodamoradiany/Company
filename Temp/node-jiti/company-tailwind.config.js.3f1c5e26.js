@@ -5,7 +5,8 @@ exports. default = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: [],
   },
   plugins: [],
-} /* v7-f4602f20b48980ca */
+}
+ /* v7-3365c49006344012 */

@@ -5,7 +5,7 @@ import { ListAray } from "../../../Constans/ListUnders/ArayList";
 
 function ListUnder() {
   return (
-    <div className="grid grid-cols-3 gap-20  ">
+    <div className="grid grid-cols-3 gap-5 w-full">
       {ListAray.map((item) => (
         <div className="flex items-center justify-between flex-col gap-20 py-[20px] px-[30px] bg-[#F9F9F9] border-[1px] rounded-[12px] border-[#E1E1E1] ">
           <div className="w-full flex flex-col items-center justify-between gap-5 ">
@@ -20,7 +20,7 @@ function ListUnder() {
               <Text>{item.text2}</Text>
             </div>
           </div>
-          <Button style=" w-full bg-[#CB1B1B] text-[#FFFFFF] rounded-[8px] py-[10px] flex items-center justify-center ">
+          <Button className=" w-full bg-[#CB1B1B] text-[#FFFFFF] rounded-[8px] py-[10px] flex items-center justify-center ">
             {item.button}
           </Button>
         </div>
