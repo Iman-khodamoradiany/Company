@@ -1,6 +1,7 @@
-function Button({children , style , Onclick}){
+function Button({children , style,OnClick}){
     return (
-        <button onClick={Onclick} type="button" className={style}>{children}</button>
+        <button type="button" className={style} onClick={OnClick}>{children}</button>
+
     )
 }
 
