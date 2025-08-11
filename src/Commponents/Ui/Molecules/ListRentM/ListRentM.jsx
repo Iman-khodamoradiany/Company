@@ -5,7 +5,7 @@ import Button from "./../../Atom/Button/Button";
 import Text from "./../../Atom/Text/Text";
 import LinkPage from "../../Atom/LinkPage/LinkPage";
 
-function ListRentM() {
+function ListRentM({start,end,stay}) {
   const [pine, setpine] = useState({});
   const pineActive = (id) => {
     setpine((prev) => ({
@@ -15,8 +15,8 @@ function ListRentM() {
   };
 
   return (
-    <div className="w-full grid grid-cols-4 gap-[20px]    ">
-      {ArayListRent.map((item) => (
+    <div className={stay} >
+      {ArayListRent.slice(start,end).map((item) => (
         <div className=" bg-[#FFFFFF] border-[1px] border-[#E1E1E1] rounded-[16px]  ">
           <LinkPage To="/RentHome">
             <div

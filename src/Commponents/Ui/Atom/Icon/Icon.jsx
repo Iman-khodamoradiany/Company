@@ -23,6 +23,11 @@ import Bathroom from './Icons/Bathroom/Bathroom';
 import TypeOfBathroom from './Icons/TypeOfBathroom/TypeOfBathroom';
 import Cooling from './Icons/Cooling/Cooling';
 import Heating from './Icons/Heating/Heating';
+import Like from "./Icons/Like/Like";
+import Dislike from "./Icons/Dislike/Dislike";
+import LikeActiv from './Icons/LikeActiv/LikeActiv';
+import DislikeActiv from './Icons/DislikeActiv/DislikeActiv';
+import DownloadActiv from './Icons/DownloadActiv/DownloadActiv';
 
 function Icon({ Name, style,Fill }) {
   switch (Name) {
@@ -52,6 +57,8 @@ function Icon({ Name, style,Fill }) {
       return <TikeBlue />;
     case "Download":
       return <Download />;
+    case "DownloadActiv":
+      return <DownloadActiv />;
     case "Home":
       return <Home />;
     case "Room":
@@ -76,6 +83,14 @@ function Icon({ Name, style,Fill }) {
       return <Cooling />;
     case "Heating":
       return <Heating />;
+    case "Like":
+      return <Like />;
+    case "Dislike":
+      return <Dislike />;
+    case "LikeActiv":
+      return <LikeActiv />;
+    case "DislikeActiv":
+      return <DislikeActiv />;
   }
 }
 export default Icon;
