@@ -11,7 +11,7 @@ function ListUnderRent() {
           <Text style="text-[2.5vw] text-[#353535]  " >جدیدترین خانه‌های اجاره‌ای تهران </Text>
         </div>
         <div className="w-full ">
-          <ListRentM />
+          <ListRentM start="0" end="8" stay="w-full grid grid-cols-4 gap-[20px]"/>
         </div>
       </div>
     </div>
