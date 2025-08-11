@@ -4,12 +4,12 @@ import Text from "../../Atom/Text/Text";
 function Ul({ items, Fal = false , style , header , headerStyle}) {
     return (
         <ul className={style}>
-            <li className={`text-bold mb-3 ${headerStyle}`}>
+            <li className={`text-bold mb-1 ${headerStyle}`}>
                 {Fal ?
                 <LinkPage>{header}</LinkPage> : <Text>{header}</Text>}
             </li>
             {items.map((item) => (
-                <li className="mb-2">
+                <li>
                     {
                         Fal ? <LinkPage To={item.to}>{item.title}</LinkPage> : <Text>{item}</Text>
                     }

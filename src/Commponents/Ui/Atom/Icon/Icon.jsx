@@ -10,6 +10,9 @@ import PineActiv from "./Icons/PineActiv/PineActiv";
 import TikeBlue from "./Icons/TikeBlue/TikeBlue";
 import Telegram from "./Icons/Telegram/Telegram";
 import BigLogo from "./Icons/BigLogo/BigLogo";
+import Clock from "./Icons/Clock/Clock";
+import Profile from "./Icons/Profile/Profile";
+
 function Icon({ Name, style }) {
   switch (Name) {
     case "Logo":
@@ -20,13 +23,13 @@ function Icon({ Name, style }) {
       return <Burger />;
     case "Next":
       return <Next />;
-    case "ArrowBottm":
+    case "ArrowBottom":
       return <ArrowBottom />;
     case "Phone":
       return <Phone />;
     case "Instagram":
       return <Instagram />;
-    case "Telegramn":
+    case "Telegram":
       return <Telegram />;
     case "BigLogo":
       return <BigLogo />;
@@ -36,6 +39,13 @@ function Icon({ Name, style }) {
       return <PineActiv />;
     case "TikeBlue":
       return <TikeBlue />;
+    case "Clock":
+      return <Clock />;
+    case "Profile":
+      return <Profile />;
+    default:
+      return null;
   }
 }
+
 export default Icon;

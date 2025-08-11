@@ -18,7 +18,7 @@ function ListUnder() {
   const isMobile = width > MAX_MOBILE_WIDTH;
 
   return (
-    <div className=" grid grid-cols-3 gap-20  ">
+    <div className=" grid grid-cols-3 gap-5  ">
       {isMobile ? (
         <>
           {ListAray.map((item) => (
@@ -35,7 +35,7 @@ function ListUnder() {
                   <Text>{item.text2}</Text>
                 </div>
               </div>
-              <Button style=" w-full bg-[#CB1B1B] text-[#FFFFFF] rounded-[8px] py-[10px] flex items-center justify-center ">
+              <Button className=" w-full bg-[#CB1B1B] text-[#FFFFFF] rounded-[8px] py-[10px] flex items-center justify-center ">
                 {item.button}
               </Button>
             </div>

@@ -7,7 +7,7 @@ function Slogan() {
                 <Icon Name={'BigLogo'} />
             </div>
             <Text style={'text-[1.2vw] font-bold'}>تجربه لذت خانه دار شدن سریع و آسان</Text>
-            <div className="text-[0.9vw] w-[90%]">
+            <div className="text-[1vw] w-[100%]">
                 <Text>سقفینو پلی است تا به سرعت در بین هزاران آگهی ثبت‌شده جست‌وجو کنید. </Text>
                 <Text>ملک مورد نظر را پیدا کنید و برای انجام معامله‌ای مطمئن، با مشاورین املاک معتمد و متخصص شهرتان در ارتباط باشید.</Text>
             </div>

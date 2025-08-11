@@ -4,10 +4,10 @@ import ListRentM from "../../Molecules/ListRentM/ListRentM";
 
 function ListUnderRent() {
   return (
-    <div className="w-full  flex items-center justify-center my-[50px] ">
-      <div className="w-[85%]  ">
+    <div className="w-full  flex items-center justify-center my-[15px] ">
+      <div className="w-full">
         <div className="w-full flex items-center justify-between py-[30px] ">
-          <Button style="text-[1.2vw] text-[#717171] " >مشاهده همه</Button>
+          <Button className="text-[1.2vw] text-[#717171] " >مشاهده همه</Button>
           <Text style="text-[2.5vw] text-[#353535]  " >جدیدترین خانه‌های اجاره‌ای تهران </Text>
         </div>
         <div className="w-full ">

@@ -10,28 +10,33 @@ import ListUnderRent from "../../Commponents/Ui/Organisms/ListRent/ListUnderRent
 import Suggested from "../../Commponents/Ui/Organisms/Suggested/Suggested";
 import SliderRents from "../../Commponents/Ui/Organisms/SliderRents/SliderRents";
 import SliderUsers from "../../Commponents/Ui/Organisms/SliderUsers/SliderUsers";
+import SignUp from "../../Commponents/Ui/Molecules/SignUp/SignUp";
+import { createContext, useState } from "react";
+export const Ejare = createContext();
 function HomePage() {
-
+  const [ButtonEJ, setButtonEJ] = useState(false)
   return (
-    <>
-      <header className="h-[100vh] w-full bg-contain lg:bg-cover bg-[url(/Background/Photo.png)] bg-cover bg-no-repeat relative w-full flex justify-start items-end">
+    <Ejare.Provider value={{ ButtonEJ, setButtonEJ }}>
+      <div>
+        <SignUp />
         <Header />
-        
-      </header>
-      
-      <section>
-        {/* <ListO />
-        <HomeList />
-        <BoxCouncil />
-        <Slider/> */}
-        <ListUnderRent/>
-        <BoxRent/>
-        <Suggested/>
-        <SliderRents/>
-        <SliderUsers/>
-      </section>
-    </>
+        <section className={`w-[90%] mx-auto flex justify-center items-center flex-col gap-[70px] font-bold my-10`}>
+          <div className={`w-full h-full mx-auto ${ButtonEJ ? 'hidden' : 'flex'} justify-between items-center flex-col gap-[70px] font-bold`}>
+            <ListO />
+            <HomeList />
+            <BoxCouncil />
+            <Slider />
+          </div>
+          <div className={`w-full h-full mx-auto ${ButtonEJ ? 'flex' : 'hidden'} justify-between gap-10 items-center flex-col font-bold`}>
+            <ListUnderRent />
+            <BoxRent />
+            <Suggested />
+            <SliderRents />
+            <SliderUsers />
+          </div>
+        </section>
+      </div>
+    </Ejare.Provider>
   );
 }
-
 export default HomePage;
