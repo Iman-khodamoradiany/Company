@@ -1,6 +1,6 @@
-function Input({title , style , type}){
+function Input({title , style , type,Onclick,DefaultChecked}){
     return(
-        <input className={style} type={type} placeholder={title}/>
+        <input className={style} onClick={Onclick} defaultChecked={DefaultChecked} type={type} placeholder={title}/>
     )
 }
 export default Input
