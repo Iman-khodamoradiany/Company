@@ -15,7 +15,7 @@ function HeaderFooter() {
             </div>
             <div className="w-full flex justify-between items-start">
                 <div className="w-[25%] flex justify-start items-start">
-                    <MoreListUnder style={'text-[1vw]'} item1={Market} items2={Market} header={'بازارهای املاک و مستغلات'} />
+                    <MoreListUnder style={'text-[1.1vw]'} item1={Market} items2={Market} header={'بازارهای املاک و مستغلات'} />
                 </div>
                 <div className="w-[25%] flex justify-end items-start">
                     <MoreListUnder style={'text-[1vw]'} item1={MoreSearch} items2={MoreSearch} header={'بیشترین جست‌وجوها'} />

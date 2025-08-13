@@ -1,6 +1,7 @@
-function Input({title , style , type,Onclick,DefaultChecked}){
+
+function Input(props){
     return(
-        <input className={style} onClick={Onclick} defaultChecked={DefaultChecked} type={type} placeholder={title}/>
+        <input {...props}/>
     )
 }
 export default Input

@@ -7,6 +7,7 @@ import LinkPage from "../../Atom/LinkPage/LinkPage";
 
 function ListRentM({ CurrantPost, stay,start,end }) {
   
+
   const [pine, setpine] = useState({});
   const pineActive = (id) => {
     setpine((prev) => ({
@@ -59,6 +60,7 @@ function ListRentM({ CurrantPost, stay,start,end }) {
           ))}
         </>
       )}
+
     </div>
   );
 }

@@ -8,7 +8,6 @@ import '../../Organisms/Navbar/Navbar.css'
 function MoreListUnder({ item1, items2, header, more = true , style }) {
 
     const [showMore, setShowMore] = useState(false);
-    console.log(showMore)
 
     function handleMoreClick() {
         setShowMore(!showMore);
@@ -30,8 +29,8 @@ function MoreListUnder({ item1, items2, header, more = true , style }) {
                 )}
             </AnimatePresence>
             {more ?
-                <div className="flex justify-center items-center gap-3 cursor-pointer" onClick={handleMoreClick}>
-                    <Button style={'text-[#871212]'}>
+                <div className="flex justify-center items-center gap-3 mt-2 cursor-pointer" onClick={handleMoreClick}>
+                    <Button className={'text-[#871212]'}>
                         مشاهده بیشتر
                     </Button>
                     <motion.svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg"

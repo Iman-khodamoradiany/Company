@@ -15,7 +15,7 @@ function ListO() {
   const isMobile = width > MAX_MOBILE_WIDTH;
 
   return (
-    <div className="w-[90%] flex flex-col items-center justify-center  mx-auto ">
+    <div className="w-full flex flex-col items-center justify-center  mx-auto ">
       {isMobile ? (
         <>
           <div className="w-full text-end py-[40px] ">

@@ -7,6 +7,7 @@ function SliderRents({text,Modules,staylParent,staylText,stayl,SlidesPerView,...
             <div className="w-[85%] flex flex-col gap-[30px]  ">
                 <Text style={staylText} >{text}</Text>
                 <SliderOptionLeft staylParent={staylParent} stayl={stayl} {...props} SlidesPerView={SlidesPerView} Modules={Modules}/>
+
             </div>
         </div>
     )

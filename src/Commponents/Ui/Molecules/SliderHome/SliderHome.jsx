@@ -9,9 +9,6 @@ import Icon from "./../../Atom/Icon/Icon";
 import useTuncateText from "./../../../HOC/Text/Text";
 
 function SliderHome() {
- 
-  
-
   return (
     <div className="flex items-center w-full justify-center  ">
       <div className="custom-prev w-[52px] h-[52px] relative left-[30px] z-10  shadow-[0px_3px_10px_0px_#00000033]  bg-[#FFFFFF] rounded-full flex items-center justify-center   cursor-pointer">
@@ -26,22 +23,21 @@ function SliderHome() {
         navigation={{
           prevEl: ".custom-prev",
         }}
-        className="w-full h-[300px]  "
+        className="w-full h-[350px]  "
       >
         {AraySlider.map((item) => (
           <SwiperSlide
             key={item.id}
-            className=" bg-[#F9F9F9] rounded-[10px] border-[#E1E1E1]  border-[1px]  "
+            className=" bg-[#F9F9F9] rounded-[10px] border-[#E1E1E1] pb-4 border-[1px] "
           >
             <div
               dir="rtl"
-              className="w-full gap-[20px] flex flex-col items-center justify-between"
-            >
+              className="w-full gap-[25px] flex flex-col items-center justify-evenly">
               <Img
                 src={item.img}
                 className="w-full h-[200px] rounded-t-[10px]"
               />
-              <Text style="text-[1.2vw] text-[#505050] font-bold "> {useTuncateText(item.text,55)}</Text>
+              <Text style="text-[1.4vw] text-[#505050] font-bold px-2"> {useTuncateText(item.text,55)}</Text>
             </div>
           </SwiperSlide>
         ))}

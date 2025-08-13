@@ -10,29 +10,35 @@ import ListUnderRent from "../../Commponents/Ui/Organisms/ListRent/ListUnderRent
 import Suggested from "../../Commponents/Ui/Organisms/Suggested/Suggested";
 import SliderRents from "../../Commponents/Ui/Organisms/SliderRents/SliderRents";
 import SliderUsers from "../../Commponents/Ui/Organisms/SliderUsers/SliderUsers";
-import { Navigation } from "swiper/modules";
-function HomePage() {
+import SignUp from "../../Commponents/Ui/Molecules/SignUp/SignUp";
+import { createContext, useState } from "react";
+export const Ejare = createContext();
 
+function HomePage() {
+  const [ButtonEJ, setButtonEJ] = useState(false)
   return (
-    <>
-      <header className="h-[100vh] w-full bg-contain lg:bg-cover bg-[url(/Background/Photo.png)] bg-cover bg-no-repeat relative w-full flex justify-start items-end">
+    <Ejare.Provider value={{ ButtonEJ, setButtonEJ }}>
+      <div>
+        <SignUp />
         <Header />
-        
-      </header>
-      
-      <section>
-        {/* <ListO />
-        <HomeList />
-        <BoxCouncil />
-        <Slider/> */}
-        <ListUnderRent/>
-        <BoxRent/>
-        <Suggested/>
-        <SliderRents staylText="w-full font-bold text-[2.5vw] [direction:rtl] text-[#212121] " staylParent="w-full flex items-center justify-center " stayl="custom-prev w-[60px] h-[60px] absolute left-[90px] z-10  shadow-[0px_3px_10px_0px_#00000033]  bg-[#FFFFFF] rounded-full flex items-center justify-center   cursor-pointer" Modules={[Navigation]} navigation={{prevEl: ".custom-prev",}} SlidesPerView={4} text="املاک برتر تهران " />
-        <SliderUsers/>
-      </section>
-    </>
+
+        <section className={`w-[90%] mx-auto flex justify-center items-center flex-col gap-[70px] font-bold my-10`}>
+          <div className={`w-full h-full mx-auto ${ButtonEJ ? 'hidden' : 'flex'} justify-between items-center flex-col gap-[70px] font-bold`}>
+            <ListO />
+            <HomeList />
+            <BoxCouncil />
+            <Slider />
+          </div>
+          <div className={`w-full h-full mx-auto ${ButtonEJ ? 'flex' : 'hidden'} justify-between gap-10 items-center flex-col font-bold`}>
+            <ListUnderRent />
+            <BoxRent />
+            <Suggested />
+            <SliderRents />
+            <SliderUsers />
+          </div>
+        </section>
+      </div>
+    </Ejare.Provider>
   );
 }
-
 export default HomePage;

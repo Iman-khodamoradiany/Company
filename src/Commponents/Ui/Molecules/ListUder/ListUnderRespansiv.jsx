@@ -31,7 +31,7 @@ function ListUnderRespansiv({slidesPerView,spaceBetween,AraySwiper}) {
                 <Text>{item.text2}</Text>
               </div>
             </div>
-            <Button style=" w-full bg-[#CB1B1B] text-[#FFFFFF] rounded-[8px] py-[10px] flex items-center justify-center ">
+            <Button className=" w-full bg-[#CB1B1B] text-[#FFFFFF] rounded-[8px] py-[10px] flex items-center justify-center ">
               {item.button}
             </Button>
           </SwiperSlide>
