@@ -27,7 +27,7 @@ function SliderOptionLeft({
   return (
     <div className={`w-full flex items-center justify-center${staylParent}`}>
       <div
-        className={`${stayl}custom-prev w-[60px] h-[60px] absolute left-[40px] z-10  shadow-[0px_3px_10px_0px_#00000033]  bg-[#FFFFFF] rounded-full flex items-center justify-center   cursor-pointer`}
+        className={`custom-prev w-[60px] h-[60px] absolute left-[40px] z-10  shadow-[0px_3px_10px_0px_#00000033]  bg-[#FFFFFF] rounded-full flex items-center justify-center   cursor-pointer ${stayl}`}
       >
         <Icon Name="Next" />
       </div>

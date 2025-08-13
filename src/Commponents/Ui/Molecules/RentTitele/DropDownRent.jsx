@@ -67,20 +67,20 @@ function DropRentTitel() {
         <Icon Name="treeLuin" />
       </div>
       {isOpen && (
-        <div className="w-[140px] my-7  mr-10   border-[2px] border-blue-400 shadow-[0px_0px_0px_3px_#0085FF30]  bg-white rounded-lg">
+        <div className="w-[140px] my-7  mr-10 z-10  border-[2px] border-blue-400 shadow-[0px_0px_0px_3px_#0085FF30]  bg-white rounded-lg">
           <ul className=" w-[140px] h-[100px] [direction:rtl] overflow-y-scroll  ">
             {New.map((item, index) => (
               <div
                 className={
                   input[item.id]
-                    ? "flex items-center justify-center gap-2 bg-red-200 mx-1"
-                    : "flex items-center justify-center gap-2 mx-1"
+                    ? "flex items-center justify-start  gap-2 bg-red-200 mx-2  "
+                    : "flex items-center justify-start  gap-2 mx-2  "
                 }
               >
                 <Input
                   type="checkbox"
                   DefaultChecked={input}
-                  style="flex items-center justfiy-center appearance-none w-4 h-4 border-2 border-red-600 rounded-sm
+                  className="flex items-center justfiy-center appearance-none w-4 h-4 border-2 border-red-600 rounded-sm
              checked:bg-red-600 checked:border-red-600
              checked:before:content-['✓']  checked:before:text-white
              checked:before:block checked:before:text-center
@@ -96,13 +96,13 @@ function DropRentTitel() {
           <div className="w-full bg-[#FAFAFA] flex items-center justify-center gap-2 p-[10px] ">
             <Button
               OnClick={input ? toggle : ""}
-              style="  text-white  bg-[#CB1B1B]  rounded-[8px] py-[4px] px-[10px] "
+              className="  text-white  bg-[#CB1B1B]  rounded-[8px] py-[4px] px-[10px] "
             >
               انتخاب
             </Button>
             <Button
               OnClick={() => setinput(!input)}
-              style="border-[#CB1B1B] border-[1px] text-[#CB1B1B] rounded-[8px] py-[4px] px-[10px]  bg-white  "
+              className="border-[#CB1B1B] border-[1px] text-[#CB1B1B] rounded-[8px] py-[4px] px-[10px]  bg-white  "
             >
               حذف
             </Button>

@@ -13,7 +13,7 @@ function HomeTitleProfile() {
         <Text style="text-[#212121] text-[1.5vw] font-bold " >علی پرتو</Text>
         <Text style="text-[#353535] text-[1vw]  " >امتیاز ۴ از ۵</Text>
         <Text style="text-[#353535] text-[1vw]  " >۵۰۰ آگهی فعال</Text>
-        <Button style="px-[80px] py-[7px] bg-[#CB1B1B] rounded-[8px] text-center text-white text-[1vw]  " >اطلاعات تماس</Button>
+        <Button className="px-[80px] py-[7px] bg-[#CB1B1B] rounded-[8px] text-center text-white text-[1vw]  " >اطلاعات تماس</Button>
       </div>
       <div className=" flex items-center justify-center  ">
         <div className="w-[80px] h-[80px] bg-teal-600 rounded-full ">

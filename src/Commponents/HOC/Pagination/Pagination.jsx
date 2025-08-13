@@ -16,12 +16,12 @@ function Pagination({ totalPosts, postsperpage, currentPage, setCurrentPage }) {
       {pages.map((item) => (
         <Button
           key={item}
-          style={`border-1 h-[40px]  w-[40px] text-[1.3vw] flex justify-center items-center rounded-[10px] cursor-pointer ${
+          className={`border-1 h-[40px]  w-[40px] text-[1.3vw] flex justify-center items-center rounded-[10px] cursor-pointer ${
             currentPage === item
               ? " text-[#2F80ED] shadow-[0px_0px_0px_3px_#0085FF30]   border-[#2F80ED] border-[2px]"
               : " text-[#121212] border-[#E1E1E1] border-[2px]"
           }`}
-          OnClick={() => handleClick(item)}
+          onClick={() => handleClick(item)}
         >
           {item}
         </Button>

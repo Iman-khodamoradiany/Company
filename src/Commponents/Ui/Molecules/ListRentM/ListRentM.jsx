@@ -27,14 +27,14 @@ function ListRentM({ CurrantPost, stay,start,end }) {
                   className="w-full h-[140px] bg-cover bg-center rounded-t-[16px]"
                   style={{ backgroundImage: `url(${item.img})` }}
                 >
-                  <Button style="w-[90px] cursor-text h-[30px] rounded-[4px] [direction:rtl] text-[0.9vw] font-bold text-white bg-[#0C0C0C66] m-[11px] ">
+                  <Button className="w-[90px] cursor-text h-[30px] rounded-[4px] [direction:rtl] text-[0.9vw] font-bold text-white bg-[#0C0C0C66] m-[11px] ">
                     {item.time}
                   </Button>
                 </div>
               </LinkPage>
               <div className="w-full px-[10px] py-[15px] flex flex-col items-end justify-between gap-[5px] ">
                 <div className="w-full  flex items-center justify-between ">
-                  <Button OnClick={() => pineActive(item.id)}>
+                  <Button onClick={() => pineActive(item.id)}>
                     <Icon
                       Name={pine[item.id] ? "PineActiv" : "Pine"}
                       Fill="#909090"
