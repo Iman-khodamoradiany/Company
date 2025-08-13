@@ -9,8 +9,8 @@ function Footer() {
 
 
     return (
-        <footer className="flex justify-center items-center flex-col pt-10 bg-[#F9F9F9] w-full" dir="rtl">
-            <div className="w-[80%] flex justify-between items-center flex-col gap-10">
+        <footer className="flex justify-center items-center flex-col bg-[#F9F9F9] w-full pt-10" dir="rtl">
+            <div className="w-[85%] flex justify-evenly items-center flex-col gap-10">
                 <HeaderFooter />
                 <div className="w-[110%] h-[2px] bg-[#D9D9D9]"></div>
                 <Ffotter />
