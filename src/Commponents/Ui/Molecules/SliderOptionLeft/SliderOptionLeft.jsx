@@ -5,20 +5,18 @@ import Icon from "./../../Atom/Icon/Icon";
 import Img from "./../../Atom/Img/Img";
 import Text from "../../Atom/Text/Text";
 
-function SliderOptionLeft() {
+function SliderOptionLeft({Modules,stayl,staylParent,SlidesPerView,...props}) {
   return (
-    <div className="w-full flex items-center justify-center ">
-      <div className="custom-prev w-[60px] h-[60px] absolute left-[90px] z-10  shadow-[0px_3px_10px_0px_#00000033]  bg-[#FFFFFF] rounded-full flex items-center justify-center   cursor-pointer">
+    <div className={`w-full flex items-center justify-center${staylParent}`} >
+      <div className={stayl}>
         <Icon Name="Next" />
       </div>
       <Swiper
-        modules={[Navigation]}
-        slidesPerView={4}
+        modules={Modules}
+        slidesPerView={SlidesPerView}
         spaceBetween={20}
         loop={true}
-        navigation={{
-          prevEl: ".custom-prev",
-        }}
+        {...props}
       >
         {SliderRentBrands.map((item) => (
           <SwiperSlide

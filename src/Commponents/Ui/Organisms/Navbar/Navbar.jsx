@@ -4,7 +4,7 @@ import Button from "../../Atom/Button/Button"
 import './Navbar.css'
 function Navbar() {
     const list = [
-        { to: '/', title: 'اجاره' },
+        { to: '/PageRents', title: 'اجاره' },
         { to: '/', title: 'خرید' },
         { to: '/', title: 'املاک و مستغلات' },
         { to: '/', title: 'مشاورین املاک' },
