@@ -11,7 +11,7 @@ function Header() {
                     <Text style={'text-[3.5vw] text-[#EDEDED] font-[HORIZONTAL]'}>سقفینو؛ سقفی برای همه</Text>
                     <Text style={'text-[2.2vw] text-[#EDEDED] font-[HORIZONTAL]'}>آسانی و سرعت در پیدا کردن یک سقف تازه را در سقفینو تجربه کنید</Text>
                 </div>
-                <div className="w-full"  onClick={(e) => e.stopPropagation()}>
+                <div className="w-full" onClick={(e) => e.stopPropagation()}>
                     <FormSearch />
                 </div>
             </section>
