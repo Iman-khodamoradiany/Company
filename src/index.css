@@ -25,3 +25,25 @@ button {
     }
 }
 
+@layer utilities {
+  .scrollbar-custom::-webkit-scrollbar {
+    width: 15px;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius:8px;
+
+    
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-thumb {
+    background: #ADADAD;
+    border-radius:8px;
+
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-thumb:hover {
+    background: #8f8f8f;
+  }
+}

@@ -1,15 +1,13 @@
-import { ArayAllFilters } from "../../../Constans/AllFilters/AllFilters";
+import AllFiltersMap from "../AllFiltersMap/AllFiltersMap";
 
-function AllFilters() {
+export default function AllFilters() {
   return (
-    <div className="w-full h-[600px] flex flex-col items-center justify-center gap-20 overflow-y-scroll   bg-green-500 ">
-      {ArayAllFilters.map((item) => (
-        <div key={item.id} className="h-[200px] bg-blue-500 text-white">
-          {item.name}
+    <div className="w-full h-[78%] bg-[#F9F9F9] flex justify-center ">
+      <div className="w-full flex flex-col min-h-0 py-4">
+        <div className="flex-1 min-h-0 overflow-y-auto scrollbar-custom">
+          <AllFiltersMap />
         </div>
-      ))}
+      </div>
     </div>
   );
 }
-
-export default AllFilters;

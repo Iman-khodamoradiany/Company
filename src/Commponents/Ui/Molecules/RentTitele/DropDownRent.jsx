@@ -68,7 +68,7 @@ function DropRentTitel() {
       </div>
       {isOpen && (
         <div className="w-[140px] my-7  mr-10 z-10  border-[2px] border-blue-400 shadow-[0px_0px_0px_3px_#0085FF30]  bg-white rounded-lg">
-          <ul className=" w-[140px] h-[100px] [direction:rtl] overflow-y-scroll  ">
+          <ul className=" w-[140px] h-[100px] [direction:rtl] overflow-y-auto scrollbar-custom   ">
             {New.map((item, index) => (
               <div
                 className={
@@ -93,7 +93,7 @@ function DropRentTitel() {
               </div>
             ))}
           </ul>
-          <div className="w-full bg-[#FAFAFA] flex items-center justify-center gap-2 p-[10px] ">
+          <div className="w-full bg-[#FAFAFA] rounded-b-lg flex items-center justify-center gap-2 p-[10px] ">
             <Button
               OnClick={input ? toggle : ""}
               className="  text-white  bg-[#CB1B1B]  rounded-[8px] py-[4px] px-[10px] "

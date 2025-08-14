@@ -12,8 +12,8 @@ function RentTitele() {
         <div
           className={
             activ2
-            ? " h-[50px] flex    text-[#505050] border-blue-400 shadow-[0px_0px_0px_3px_#0085FF30]  border-[1px] rounded-[8px]   "
-            : " h-[50px] flex    text-[#505050]  border-[#ADADAD] border-[1px] rounded-[8px]   "
+            ? " h-[40px] flex    text-[#505050] border-blue-400 shadow-[0px_0px_0px_3px_#0085FF30]  border-[1px] rounded-[8px]   "
+            : " h-[40px] flex    text-[#505050]  border-[#ADADAD] border-[1px] rounded-[8px]   "
           }
           onClick={() => setactiv2(!activ2)}
         >

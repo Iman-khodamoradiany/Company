@@ -28,21 +28,13 @@ function CustomDropdown({ option, TextDefulte }) {
     }));
   };
 
-  // const handleselect = (name) => {
-  //   setselected(name);
-  //   setIsOpen(false);
-  //   if (iconToggled == "up") {
-  //     seticonToggled("down");
-  //   } else {
-  //     seticonToggled("up");
-  //   }
-  // };
 
   return (
-    <div className="w-[100px] py-[5px] px-[12px] m-auto flex items-center justify-center flex-col ">
+        
+    <div  className="w-[100px] py-[5px] px-[12px] m-auto flex items-center justify-center flex-col ">
       <div
-        className="w-full flex items-center justify-center   "
-        onClick={toggle}
+      onClick={toggle}
+        className="w-[80px] h-[35px]  flex items-center justify-center   "
       >
         <Icon
           Name={
@@ -63,7 +55,7 @@ function CustomDropdown({ option, TextDefulte }) {
       </div>
       {isOpen && (
         <div className="w-[140px] my-7  mr-10 z-10  border-[2px] border-blue-400 shadow-[0px_0px_0px_3px_#0085FF30]  bg-white rounded-lg">
-          <ul className=" w-[140px] h-[100px] [direction:rtl] overflow-y-scroll  ">
+          <ul className=" w-[140px] h-[100px] [direction:rtl]  overflow-y-auto scrollbar-custom  ">
             {option.map((item, index) => (
               <div
                 className={
@@ -88,7 +80,7 @@ function CustomDropdown({ option, TextDefulte }) {
               </div>
             ))}
           </ul>
-          <div className="w-full bg-[#FAFAFA] flex items-center justify-center gap-2 p-[10px] ">
+          <div className="w-full rounded-b-lg bg-[#FAFAFA] flex items-center justify-center gap-2 p-[10px] ">
             <Button
               OnClick={input ? toggle : ""}
               className="  text-white  bg-[#CB1B1B]  rounded-[8px] py-[4px] px-[10px] "
