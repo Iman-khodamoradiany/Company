@@ -7,6 +7,7 @@ function PageRents() {
   const [click, setclick] = useState();
   return (
     <div>
+      <SignUp />
       <div>
         <HeaderFilter set={() => setclick("on")} />
         <PaginationBox />

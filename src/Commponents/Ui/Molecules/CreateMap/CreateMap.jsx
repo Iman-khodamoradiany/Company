@@ -12,7 +12,7 @@ function CreateMap({ click = false, items }) {
     }
     const customicon = L.icon({
         iconUrl: '/public/iconMarker/Vector.png',
-        iconSize: [40, 40],
+        iconSize: [30, 35],
         iconAnchor: [16, 32],
         popupAnchor: [0, -32]
     })

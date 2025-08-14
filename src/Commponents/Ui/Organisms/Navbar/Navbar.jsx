@@ -12,7 +12,7 @@ function Navbar() {
     const id = useLocation();
     const { PopUp, setPopUp, Token } = useContext(MyContext)
     return (
-        <nav className={`flex justify-between items-center z-10 w-full left-[50%] top-[35px] rounded-0 ${id.pathname != '/' ? 'bg-[#F9F9F9]' : 'bg-white'}  px-5 py-4 rounded-0 lg:w-[85%] lg:absolute lg:top-[80px] lg:rounded-xl lg:translate-x-[-50%] lg:translate-y-[-50%]`} dir="rtl">
+        <nav className={`flex justify-between items-center z-10 w-full left-[50%] top-[35px] rounded-0 ${id.pathname != '/' ? 'bg-[#F9F9F9] mt-8' : 'bg-white lg:absolute lg:translate-x-[-50%] lg:translate-y-[-50%]'} mx-auto   px-5 py-4 rounded-0 lg:w-[85%]  lg:top-[80px] lg:rounded-xl `} dir="rtl">
             <div className="w-[25%] block lg:hidden">
                 <Icon Name={'Burger'}></Icon>
             </div>

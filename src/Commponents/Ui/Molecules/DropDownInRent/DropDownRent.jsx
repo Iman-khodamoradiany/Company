@@ -17,7 +17,7 @@ function DropDownRent({set}) {
   const [activ4, setactiv4] = useState(null);
   const [activ5, setactiv5] = useState(null);
   return (
-    <div className="flex gap-5">
+    <div className="flex justify-center items-center w-1/2 gap-2">
       <Button onClick={set}>
         <div
           className={

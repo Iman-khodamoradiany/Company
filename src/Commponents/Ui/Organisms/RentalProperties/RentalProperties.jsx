@@ -5,7 +5,7 @@ import { ArayListRent } from "../../../Constans/ListUnderRent/ListRent";
 
 function RentalProperties({CurrantPost,start,end}) {
   return (
-    <div className="w-full flex items-center justify-center  my-10 ">
+    <div className="w-full flex items-center justify-center  mt-5 mb-10 ">
       <div className="w-[85%] flex items-center justify-between ">
         <div className=" w-[48%] h-[630px] flex items-center justify-end bg-blue-400 mt-10">
           <CreateMap click={false} items={ArayListRent}/>
