@@ -5,8 +5,13 @@ import HomeText from "../../Commponents/Ui/Organisms/HomeText/HomeText";
 import HomeTitle from "../../Commponents/Ui/Organisms/HomeTitle/HomeTitle";
 import MapHome from "../../Commponents/Ui/Organisms/MapHome/MapHome";
 import SimilarAds from "../../Commponents/Ui/Organisms/SimilarAds/SimilarAds";
+import { ArayListRent } from "../../Commponents/Constans/ListUnderRent/ListRent";
+import { useParams } from "react-router";
 
 function Page2Homes() {
+  const {id} = useParams();
+  const FindHome = ArayListRent.find(item => item.id == id);
+  
   return (
     <>
       <section>
@@ -15,7 +20,7 @@ function Page2Homes() {
         <HomeTitle />
         <FacilitiesHome />
         <Description />
-        <MapHome />
+        <MapHome Home={FindHome}/>
         <SimilarAds/>
       </section>
     </>

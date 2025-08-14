@@ -22,7 +22,7 @@ function ListRentM({ CurrantPost, stay,start,end }) {
         <>
           {CurrantPost.slice(start,end).map((item) => (
             <div className=" bg-[#FFFFFF] border-[1px] border-[#E1E1E1] rounded-[16px]  ">
-              <LinkPage To="/RentHome">
+              <LinkPage To={`/RentHome/${item.id}`}>
                 <div
                   className="w-full h-[140px] bg-cover bg-center rounded-t-[16px]"
                   style={{ backgroundImage: `url(${item.img})` }}

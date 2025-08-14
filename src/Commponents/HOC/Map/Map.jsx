@@ -1,13 +1,9 @@
-import Img from "../../Ui/Atom/Img/Img"
+import CreateMap from "../../Ui/Molecules/CreateMap/CreateMap"
 
-
-
-function CostomMap() {
-
-
+function CostomMap({Home}) {
   return (
     <div className="w-[570px]  h-[353px] ">
-    <Img src="/map.png" className="w-full h-full " /> 
+      <CreateMap items={Home} />
     </div>
   )
 }

@@ -9,7 +9,7 @@ function CustomDropdown({ option, TextDefulte }) {
   const [icon, seticon] = useState(false);
   const [selected, setselected] = useState(TextDefulte);
   const [iconToggled, seticonToggled] = useState("down");
-  console.log(input);
+  
 
   const toggle = () => {
     setIsOpen(!isOpen);
