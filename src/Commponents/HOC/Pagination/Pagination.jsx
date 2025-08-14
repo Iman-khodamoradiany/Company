@@ -12,7 +12,7 @@ function Pagination({ totalPosts, postsperpage, currentPage, setCurrentPage }) {
   };
 
   return (
-    <div className="flex justify-center items-center gap-5 mt-5 ">
+    <div className="flex justify-center items-center gap-5 my-10 ">
       {pages.map((item) => (
         <Button
           key={item}
