@@ -3,6 +3,7 @@ import ListUnder from "../../Molecules/ListUder/ListUnder";
 import Text from "./../../Atom/Text/Text";
 
 function ListO() {
+  
   const MAX_MOBILE_WIDTH = 428;
 
   const [width, setWidth] = useState(window.innerWidth);
@@ -28,7 +29,7 @@ function ListO() {
       ) : (
         <>
           <div className="w-full text-end py-[20px] mt-10 ">
-            <Text style=" font-bold text-[4.9vw] text-[#353535]  ">
+            <Text style=" font-bold text-[4vw] text-[#353535]  ">
               سقفینو چطور به خانه‌دار شدن شما کمک می‌کند
             </Text>
           </div>

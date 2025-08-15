@@ -6,9 +6,11 @@ import { useContext, useState } from "react"
 import ConfirmPopUp from "../ConfirmPopUp/ConfirmPopUp"
 import Business_Card from "../Business_Card/Business_Card"
 import { UNSAFE_decodeViaTurboStream } from "react-router"
+import WinodowReportProblem from './../WinodowReportProblem/WinodowReportProblem';
+
 
 function SignUp() {
-    const { PopUp, setPopUp, Card } = useContext(MyContext)
+    const { PopUp, setPopUp, Card ,Report } = useContext(MyContext)
     const [SC, setSC] = useState(false)
     const [Number, setNumber] = useState()
 
@@ -23,6 +25,7 @@ function SignUp() {
                 <Business_Card />
             </div>
 
+           
 
         </>
 

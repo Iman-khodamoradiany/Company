@@ -11,9 +11,12 @@ function App() {
   const [PopUp, setPopUp] = useState(false)
   const [Token, setToken] = useState(false);
   const [Card , setCard] = useState(false)
+  const [Report , setReport] = useState(false)
+  const [Title , setTitle] = useState(false)
+
   return (
     <>
-      <MyContext.Provider value={{ PopUp, setPopUp, Token, setToken , Card , setCard}}>
+      <MyContext.Provider value={{ PopUp, setPopUp, Token, setToken , Card , setCard, Report , setReport , Title , setTitle }}>
           <Layout>
         <Routes>
           <Route path="/" element={<HomePage />} />

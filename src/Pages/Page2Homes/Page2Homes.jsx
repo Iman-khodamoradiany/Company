@@ -5,8 +5,11 @@ import HomeText from "../../Commponents/Ui/Organisms/HomeText/HomeText";
 import HomeTitle from "../../Commponents/Ui/Organisms/HomeTitle/HomeTitle";
 import MapHome from "../../Commponents/Ui/Organisms/MapHome/MapHome";
 import SimilarAds from "../../Commponents/Ui/Organisms/SimilarAds/SimilarAds";
+import WindowProblem from "../../Commponents/Ui/Organisms/WindowsBoxes/WindowProblem";
+import WindowTitele from "../../Commponents/Ui/Organisms/WindowsBoxes/WindowTitele";
 
 function Page2Homes() {
+  
   return (
     <>
       <section>
@@ -16,8 +19,11 @@ function Page2Homes() {
         <FacilitiesHome />
         <Description />
         <MapHome />
-        <SimilarAds/>
+        <SimilarAds />
       </section>
+      <WindowProblem/>
+      <WindowTitele/>
+
     </>
   );
 }
