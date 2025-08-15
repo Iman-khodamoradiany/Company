@@ -7,7 +7,7 @@ function CostomMap() {
 
   return (
     <div className="w-[570px]  h-[353px] ">
-    <Img src="/map.png" className="w-full h-full " /> 
+    <Img src="/Allphoto/map.png" className="w-full h-full " /> 
     </div>
   )
 }
