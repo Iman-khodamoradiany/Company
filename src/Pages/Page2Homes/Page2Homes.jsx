@@ -16,8 +16,9 @@ function Page2Homes() {
         <FacilitiesHome />
         <Description />
         <MapHome />
-        <SimilarAds/>
+        <SimilarAds />
       </section>
+      
     </>
   );
 }

@@ -18,7 +18,7 @@ function ListUnder() {
   const isMobile = width > MAX_MOBILE_WIDTH;
 
   return (
-    <div className=" grid grid-cols-3 gap-5  ">
+    <div className={isMobile?" grid grid-cols-3 gap-5  ":""}>
       {isMobile ? (
         <>
           {ListAray.map((item) => (
