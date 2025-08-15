@@ -18,7 +18,7 @@ function PaginationBox() {
   const CurrantPost = GetProducts.slice(firstPostIndex, lastPostIndex);
 
   return (
-    <div className="">
+    <div>
       <RentalProperties CurrantPost={CurrantPost} start={0} end={4} />
       <SliderBrandRent />
       <RentHomeList CurrantPost={CurrantPost} start={0} end={4} />

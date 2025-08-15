@@ -19,15 +19,17 @@ function SliderOptionLeft({
 }) {
   const { Card, setCard, setPopUp } = useContext(MyContext);
   const dispatch = useDispatch();
+
   function HandelButton(info) {
     setPopUp(true);
     setCard(true);
     dispatch(infocard(info));
   }
+
   return (
     <div className={`w-full flex items-center justify-center${staylParent}`}>
       <div
-        className={`custom-prev w-[60px] h-[60px] absolute left-[40px] z-10  shadow-[0px_3px_10px_0px_#00000033]  bg-[#FFFFFF] rounded-full flex items-center justify-center   cursor-pointer ${stayl}`}
+        className={`custom-prev w-[60px] h-[60px] absolute left-[75px] z-10  shadow-[0px_3px_10px_0px_#00000033]  bg-[#FFFFFF] rounded-full flex items-center justify-center   cursor-pointer ${stayl}`}
       >
         <Icon Name="Next" />
       </div>
@@ -37,15 +39,18 @@ function SliderOptionLeft({
         spaceBetween={20}
         loop={true}
         {...props}
+        navigation={{
+          prevEl: ".custom-prev",
+        }}
       >
         {SliderRentBrands.map((item) => (
           <SwiperSlide
             key={item.id}
-            className="w-full   bg-[#FFFFFF] rounded-[10px] border-[#E1E1E1]  border-[2px] shadow-[0px_1px_2px_0px_#0000000D,0px_2px_8px_0px_#00000014] "
+            className="w-full bg-[#FFFFFF] rounded-[10px] border-[#E1E1E1]  border-[2px] shadow-[0px_1px_2px_0px_#0000000D,0px_2px_8px_0px_#00000014] "
           >
             <Button
               onClick={() => HandelButton(item)}
-              className={"flex justify-center items-center flex-col w-full"}
+              className={"flex justify-center items-center flex-col w-full z-50"}
             >
               <div className="w-full  flex flex-col items-center justify-center gap-[15px] py-[30px]">
                 <div className="w-full flex items-center justify-center ">

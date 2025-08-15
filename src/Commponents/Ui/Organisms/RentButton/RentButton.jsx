@@ -3,6 +3,7 @@ import ListUnderRent from "../ListRent/ListUnderRent"
 import SliderRents from "../SliderRents/SliderRents"
 import SliderUsers from "../SliderUsers/SliderUsers"
 import Suggested from "../Suggested/Suggested"
+import { Navigation } from "swiper/modules"
 
 function RentButton() {
     return (
@@ -10,7 +11,7 @@ function RentButton() {
             <ListUnderRent />
             <BoxRent />
             <Suggested />
-            <SliderRents />
+            <SliderRents SlidesPerView={4} Modules={[Navigation]}/>
             <SliderUsers />
         </div>
     )

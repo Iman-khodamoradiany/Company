@@ -3,8 +3,8 @@ import InputRent from "../../Molecules/InputRent/InputRent"
 
 function HeaderFilter({set}) {
     return (
-        <div className="mt-[200px] w-full  flex items-center justify-center">
-            <div className="w-[85%]  flex items-center justify-between">
+        <div className="w-full mt-10 flex items-center justify-center">
+            <div className="w-[85%] flex items-center justify-between gap-2">
                 <InputRent/>
                 <DropDownRent  set={set} />
             </div>

@@ -1,6 +1,7 @@
 import Button from "../../Atom/Button/Button";
 import Text from "./../../Atom/Text/Text";
 import ListRentM from "../../Molecules/ListRentM/ListRentM";
+import { ArayListRent } from "../../../Constans/ListUnderRent/ListRent";
 
 function ListUnderRent() {
   return (
@@ -11,7 +12,7 @@ function ListUnderRent() {
           <Text style="text-[2.5vw] text-[#353535]  " >جدیدترین خانه‌های اجاره‌ای تهران </Text>
         </div>
         <div className="w-full ">
-          <ListRentM start="0" end="8" stay="w-full grid grid-cols-4 gap-[20px]"/>
+          <ListRentM CurrantPost={ArayListRent} start="0" end="8" stay="w-full grid grid-cols-4 gap-[20px]"/>
         </div>
       </div>
     </div>

@@ -1,3 +1,5 @@
+import Button from "../../Atom/Button/Button"
+import Icon from "../../Atom/Icon/Icon"
 import HomePartsImg from "../../Molecules/HomePartsImg/HomePartsImg"
 
 function HomeParts() {

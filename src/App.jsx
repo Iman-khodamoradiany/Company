@@ -20,11 +20,12 @@ function App() {
           <Layout>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/RentHome" element={<Page2Homes />} />
+          <Route path='/RentHome/:id' element={<Page2Homes />} />
           <Route path="/PageRents" element={<PageRents/>} />
           <Route path="/But" element={<h1>iman</h1>} />
         </Routes>
       </Layout>
+
       </MyContext.Provider>
     </>
   )

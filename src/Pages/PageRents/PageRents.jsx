@@ -1,13 +1,13 @@
+import SignUp from "../../Commponents/Ui/Molecules/SignUp/SignUp";
 import { useState } from "react";
 import HeaderFilter from "../../Commponents/Ui/Organisms/HeaderFilter/HeaderFilter";
 import PaginationBox from "../../Commponents/Ui/Organisms/PaginationBox/PaginationBox";
 import WindowFilter from "../../Commponents/Ui/Organisms/WindowFilter/WindowFilter";
-
 function PageRents() {
   const [click, setclick] = useState();
-
   return (
     <div>
+      <SignUp />
       <div>
         <HeaderFilter set={() => setclick("on")} />
         <PaginationBox />

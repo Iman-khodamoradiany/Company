@@ -9,7 +9,7 @@ import Button from "./../../Atom/Button/Button";
 function SliderUserM() {
   return (
     <div className="w-full flex items-center justify-center">
-      <div className="custom-prev2 w-[60px] h-[60px] absolute left-[40px] z-10  shadow-[0px_3px_10px_0px_#00000033]  bg-[#FFFFFF] rounded-full flex items-center justify-center   cursor-pointer">
+      <div className="custom-prev2 w-[60px] h-[60px] absolute left-[75px] z-10  shadow-[0px_3px_10px_0px_#00000033]  bg-[#FFFFFF] rounded-full flex items-center justify-center   cursor-pointer">
         <Icon Name="Next" />
       </div>
       <Swiper
@@ -31,7 +31,7 @@ function SliderUserM() {
                 <Text style="text-[1.5vw] text-[#212121]  text-center font-bold " >{item.name}</Text>
                 <Text style="text-[1.2vw] text-[#717171]  text-center" >{item.address}</Text>
                 <Text style="text-[1.2vw] text-[#717171]  text-center my-2" >{item.reng}</Text>
-                <Button className="border-[#CB1B1B] font-bold border-[2px] text-[#CB1B1B] text-center py-[10px] px-[30px] rounded-[8px]  " >نمایش پروفایل</Button>
+                <Button className="border-[#CB1B1B] hover:bg-[#CB1B1B] hover:text-white transition-all duration-300 ease-linear font-bold border-[2px] text-[#CB1B1B] text-center py-[10px] px-[30px] rounded-[8px]  " >نمایش پروفایل</Button>
               </div>
             </div>
           </SwiperSlide>

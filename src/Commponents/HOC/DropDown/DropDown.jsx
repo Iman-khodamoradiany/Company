@@ -9,7 +9,7 @@ function CustomDropdown({ option, TextDefulte }) {
   const [icon, seticon] = useState(false);
   const [selected, setselected] = useState(TextDefulte);
   const [iconToggled, seticonToggled] = useState("down");
-  console.log(input);
+  
 
   const toggle = () => {
     setIsOpen(!isOpen);
@@ -31,10 +31,10 @@ function CustomDropdown({ option, TextDefulte }) {
 
   return (
         
-    <div  className="w-[100px] py-[5px] px-[12px] m-auto flex items-center justify-center flex-col ">
+    <div  className=" py-[5px] px-2  m-auto flex items-center justify-center flex-col ">
       <div
       onClick={toggle}
-        className="w-[80px] h-[35px]  flex items-center justify-center   "
+        className="w-full gap-3 h-[35px]  flex items-center justify-center   "
       >
         <Icon
           Name={
@@ -49,7 +49,7 @@ function CustomDropdown({ option, TextDefulte }) {
               : "FlashDown"
           }
         />
-        <div className="w-full h-full flex items-center justify-center ">
+        <div className="h-full flex items-center justify-center text-[1vw]">
           {selected}
         </div>
       </div>
