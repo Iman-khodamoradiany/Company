@@ -9,10 +9,10 @@ function HomePartTextM() {
   return (
     <div className="w-full flex items-center justify-between  ">
       <div className="w-[65%] flex items-center justify-end gap-3">
-        <Button OnClick={() => setPine(!Pine)}>
+        <Button onClick={() => setPine(!Pine)}>
           <Icon Name={Pine == false ? "Pine" : "PineActiv"} Fill="#353535" />
         </Button>
-        <Button OnClick={() => setDownload(!Download)}>
+        <Button onClick={() => setDownload(!Download)}>
           <Icon Name={Download == false ? "Download" : "DownloadActiv"} />
         </Button>
       </div>

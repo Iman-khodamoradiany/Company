@@ -4,33 +4,36 @@ import Text from "../../Atom/Text/Text";
 import Button from "../../Atom/Button/Button";
 
 function MapHomeLike() {
+
   const [Like, setLike] = useState(false);
   const [DisLike, setDisLike] = useState(false);
+ 
+  
 
   const handelLike = () => {
     if (DisLike == true) {
-      setLike(!Like);
+      setLike(true);
       setDisLike(false);
     } else {
-      setLike(!Like);
+      setLike(true);
     }
   };
   const handelDislike = () => {
     if (Like == true) {
-      setDisLike(!DisLike);
+      setDisLike(true);
       setLike(false);
     } else {
-      setDisLike(!DisLike);
+      setDisLike(true);
     }
   };
 
   return (
     <div className="flex items-center justify-center gap-14 ">
       <div className="flex items-center justify-center gap-6">
-        <Button OnClick={handelLike}>
+        <Button onClick={handelLike}>
           <Icon Name={Like == false ? "Like" : "LikeActiv"} />
         </Button>
-        <Button OnClick={handelDislike}>
+        <Button onClick={handelDislike}>
           <Icon Name={DisLike == false ? "Dislike" : "DislikeActiv"} />
         </Button>
       </div>

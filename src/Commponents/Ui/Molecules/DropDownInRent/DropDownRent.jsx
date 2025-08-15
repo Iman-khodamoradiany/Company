@@ -11,21 +11,18 @@ import Text from "./../../Atom/Text/Text";
 import Button from "../../Atom/Button/Button";
 
 function DropDownRent({set}) {
-  const [activ1, setactiv1] = useState(null);
-  const [activ2, setactiv2] = useState(null);
-  const [activ3, setactiv3] = useState(null);
-  const [activ4, setactiv4] = useState(null);
-  const [activ5, setactiv5] = useState(null);
+  const [activ, setactiv] = useState();
+  
   return (
     <div className="flex justify-center items-center w-1/2 gap-2">
       <Button onClick={set}>
         <div
           className={
-            activ1
+            activ=="1"
               ? " h-[50px]  text-[#505050] border-blue-400 shadow-[0px_0px_0px_3px_#0085FF30] flex items-center justify-around gap-3 px-3 [direction:rtl]  border-[1px] rounded-[8px]   "
               : " h-[50px]  text-[#505050]  flex items-center justify-around gap-3 px-3 [direction:rtl]  border-[#ADADAD] border-[1px] rounded-[8px]   "
           }
-          onClick={() => setactiv1(!activ1)}
+          onClick={() => setactiv("1")}
         >
           <Icon Name="Filter" />
           <Text>فیلترهای بیشتر</Text>
@@ -34,41 +31,41 @@ function DropDownRent({set}) {
 
       <div
         className={
-          activ2
-            ? " h-[50px] flex    text-[#505050] border-blue-400 shadow-[0px_0px_0px_3px_#0085FF30]  border-[1px] rounded-[8px]   "
-            : " h-[50px] flex    text-[#505050]  border-[#ADADAD] border-[1px] rounded-[8px]   "
+          activ=="2"
+            ? " h-[50px] flex  w-[100px] items-center justify-center  text-[#505050] border-blue-400 shadow-[0px_0px_0px_3px_#0085FF30]  border-[1px] rounded-[8px]   "
+            : " h-[50px] flex  w-[100px] items-center justify-center  text-[#505050]  border-[#ADADAD] border-[1px] rounded-[8px]   "
         }
-        onClick={() => setactiv2(!activ2)}
+        onClick={() => setactiv("2")}
       >
         <CustomDropdown option={Meterage} TextDefulte="متراژ" />
       </div>
       <div
         className={
-          activ3
-            ? " h-[50px] flex    text-[#505050] border-blue-400 shadow-[0px_0px_0px_3px_#0085FF30]  border-[1px] rounded-[8px]   "
-            : " h-[50px] flex    text-[#505050]  border-[#ADADAD] border-[1px] rounded-[8px]   "
+          activ=="3"
+            ? " h-[50px] flex  w-[100px] items-center justify-center   text-[#505050] border-blue-400 shadow-[0px_0px_0px_3px_#0085FF30]  border-[1px] rounded-[8px]   "
+            : " h-[50px] flex  w-[100px] items-center justify-center   text-[#505050]  border-[#ADADAD] border-[1px] rounded-[8px]   "
         }
-        onClick={() => setactiv3(!activ3)}
+        onClick={() => setactiv("3")}
       >
         <CustomDropdown option={Price} TextDefulte="قیمت" />
       </div>
       <div
         className={
-          activ4
-            ? " h-[50px] flex    text-[#505050] border-blue-400 shadow-[0px_0px_0px_3px_#0085FF30]  border-[1px] rounded-[8px]   "
-            : " h-[50px] flex    text-[#505050]  border-[#ADADAD] border-[1px] rounded-[8px]   "
+          activ=="4"
+            ? " h-[50px] flex  w-[110px] items-center justify-center   text-[#505050] border-blue-400 shadow-[0px_0px_0px_3px_#0085FF30]  border-[1px] rounded-[8px]   "
+            : " h-[50px] flex  w-[110px] items-center justify-center   text-[#505050]  border-[#ADADAD] border-[1px] rounded-[8px]   "
         }
-        onClick={() => setactiv4(!activ4)}
+        onClick={() => setactiv("4")}
       >
         <CustomDropdown option={Country} TextDefulte="نوع ملک" />
       </div>
       <div
         className={
-          activ5
-            ? " h-[50px] flex    text-[#505050] border-blue-400 shadow-[0px_0px_0px_3px_#0085FF30]  border-[1px] rounded-[8px]   "
-            : " h-[50px] flex    text-[#505050]  border-[#ADADAD] border-[1px] rounded-[8px]   "
+          activ=="5"
+            ? " h-[50px] flex  w-[100px] items-center justify-center   text-[#505050] border-blue-400 shadow-[0px_0px_0px_3px_#0085FF30]  border-[1px] rounded-[8px]   "
+            : " h-[50px] flex  w-[100px] items-center justify-center   text-[#505050]  border-[#ADADAD] border-[1px] rounded-[8px]   "
         }
-        onClick={() => setactiv5(!activ5)}
+        onClick={() => setactiv("5")}
       >
         <CustomDropdown option={Area} TextDefulte="منطقه" />
       </div>
