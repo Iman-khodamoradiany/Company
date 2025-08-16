@@ -1,12 +1,22 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Button from "../../Atom/Button/Button"
 import Icon from "../../Atom/Icon/Icon"
 import Input from "../../Atom/Input/Input"
 import Text from "../../Atom/Text/Text"
+import listSearch from "../ListSearch/ListSearch"
+import ListSearch from "../ListSearch/ListSearch"
 
 function InputRent() {
     const [Value, setValue] = useState('');
     const [SearchList, setSearchList] = useState([])
+    const [CateGory, setCateGory] = useState('')
+    const [findSearch, setFindSearch] = useState('')
+
+    useEffect(() => {
+        if (SearchList.length > 1) {
+            setCateGory(SearchList[SearchList.length - 1].title);
+        }
+    }, [SearchList]);
 
     const HandelInput = (e) => {
         if (e.key == "Enter") {
@@ -26,15 +36,16 @@ function InputRent() {
                 <Icon Name="Search" />
             </div>
             <div className="absolute left-3 flex justify-center items-center gap-2">
-                {SearchList.length >= 1 ?
+                {SearchList.length <= 1 ?
                     SearchList.map((item) => (
-                        <Button key={item.id} className={"flex justify-center items-center border border-[#353535] py-2 px-2 rounded-lg gap-3"}>
+                        <div className={"flex justify-center items-center border border-[#353535] py-2 px-2 rounded-lg gap-3"}>
                             <Button onClick={() => DeleteSearch(item.id)}>
                                 <Icon Name={'Close'}></Icon>
                             </Button>
                             <Text>{item.title}</Text>
-                        </Button>
-                    )) : ''}
+                        </div>
+                    ))
+                    : <ListSearch CateGory={{ CateGory, setCateGory, SearchList, setSearchList, setFindSearch, findSearch }} />}
             </div>
         </div >
     )

@@ -18,6 +18,9 @@ a {
 button {
     font-family: HORIZONTAL;
 }
+option {
+  font-family: HORIZONTAL;
+}
 
 @layer components {
     .Remove_Icon {
