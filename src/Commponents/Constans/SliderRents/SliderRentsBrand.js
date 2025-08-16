@@ -69,7 +69,7 @@ export const SliderRentBrands = [
   
   {
     id: 8,
-    img: "/brand1.png",
+    img: "/Allphoto/brand1.png",
     name: "املاک سبز",
     text: "تهران، پاسداران",
     number1: "میزان رضایتمندی: ۴ از ۵",
@@ -78,7 +78,7 @@ export const SliderRentBrands = [
   },
   {
     id: 9,
-    img: "/brand2.png",
+    img: "/Allphoto/brand2.png",
     name: "املاک فرشته",
     text: "تهران، خیابان فرشته",
     number1: "میزان رضایتمندی: ۴ از ۵",
@@ -88,7 +88,7 @@ export const SliderRentBrands = [
   {
     id: 10,
     icon: "TikeBlue",
-    img: "/brand3.png",
+    img: "/Allphoto/brand3.png",
     name: "املاک ولیعصر",
     text: "تهران، خیابان ولیعصر",
     number1: "میزان رضایتمندی: ۴ از ۵",
@@ -108,7 +108,7 @@ export const SliderRentBrands = [
 
   {
     id: 12,
-    img: "/brand1.png",
+    img: "/Allphoto/brand1.png",
     name: "املاک سبز",
     text: "تهران، پاسداران",
     number1: "میزان رضایتمندی: ۴ از ۵",
@@ -117,7 +117,7 @@ export const SliderRentBrands = [
   },
   {
     id: 13,
-    img: "/brand2.png",
+    img: "/Allphoto/brand2.png",
     name: "املاک فرشته",
     text: "تهران، خیابان فرشته",
     number1: "میزان رضایتمندی: ۴ از ۵",
@@ -127,7 +127,7 @@ export const SliderRentBrands = [
   {
     id: 14,
     icon: "TikeBlue",
-    img: "/brand3.png",
+    img: "/Allphoto/brand3.png",
     name: "املاک ولیعصر",
     text: "تهران، خیابان ولیعصر",
     number1: "میزان رضایتمندی: ۴ از ۵",

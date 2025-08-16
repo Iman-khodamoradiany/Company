@@ -19,13 +19,13 @@ function DropDownRent({set}) {
         <div
           className={
             activ=="1"
-              ? " h-[50px]  text-[#505050] border-blue-400 shadow-[0px_0px_0px_3px_#0085FF30] flex items-center justify-around gap-3 px-3 [direction:rtl]  border-[1px] rounded-[8px]   "
-              : " h-[50px]  text-[#505050]  flex items-center justify-around gap-3 px-3 [direction:rtl]  border-[#ADADAD] border-[1px] rounded-[8px]   "
+              ? " h-[50px]  text-[#505050] border-blue-400 shadow-[0px_0px_0px_3px_#0085FF30] flex items-center justify-around gap-2 px-1   [direction:rtl]  border-[1px] rounded-[8px]   "
+              : " h-[50px]  text-[#505050]  flex items-center justify-around gap-3 px-3 [direction:rtl]  border-[#ADADAD] border-[1px] w-[150px] rounded-[8px]   "
           }
           onClick={() => setactiv("1")}
         >
           <Icon Name="Filter" />
-          <Text>فیلترهای بیشتر</Text>
+          <Text style={'text-[1vw]'}>فیلترهای بیشتر</Text>
         </div>
       </Button>
 
