@@ -1,7 +1,12 @@
+import { useContext } from "react";
 import Icon from "../../Atom/Icon/Icon";
 import Text from "../../Atom/Text/Text";
+import { MyContext } from "../../../../App";
+import Button from "../../Atom/Button/Button";
 
 function HomeTitleReng() {
+  const {  setReport } = useContext(MyContext);
+
   return (
     <div className="w-full flex items-end justify-center flex-col  ">
       <div className="w-[74%] flex items-end justify-center flex-col gap-5 ">
@@ -18,8 +23,10 @@ function HomeTitleReng() {
             <Text>ساعاتی پیش تهران</Text>
             <Text>شناسه آگهی: ۲۳۴۴</Text>
           </div>
-          <div className="flex items-center justify-center gap-2" >
-            <Icon Name="Erorr" />
+          <div className="flex items-center justify-center gap-2">
+            <Button onClick={() => setReport(true)}>
+              <Icon Name="Erorr" />
+            </Button>
             <Text>گزارش تخلف آگهی</Text>
           </div>
         </div>

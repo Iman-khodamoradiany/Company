@@ -1,6 +1,7 @@
 import { MapContainer, Marker, Popup, TileLayer, useMapEvents } from "react-leaflet";
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet'
+
 function CreateMap({ click = false, items }) {
     const Clickhandler = () => {
         useMapEvents({

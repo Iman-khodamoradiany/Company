@@ -1,7 +1,8 @@
+
 export const ArayListRent = [
     {
         id: 1,
-        img: "/rent1.jpg",
+        img: "/Allphoto/rent1.jpg",
         time: "۲ ساعت پیش",
         text: "رهن و اجاره آپارتمان تهران",
         number1: "۲۰۰ متر، گیشا بلوار نصر",
@@ -11,7 +12,7 @@ export const ArayListRent = [
     },
     {
         id: 2,
-        img: "/rent2.jpg",
+        img: "/Allphoto/rent2.jpg",
         time: "۲ ساعت پیش",
         text: "رهن و اجاره آپارتمان تهران",
         number1: "۹۵ متر، مرزداران خیابان آزادی",
@@ -21,7 +22,7 @@ export const ArayListRent = [
     },
     {
         id: 3,
-        img: "/rent3.jpg",
+        img: "/Allphoto/rent3.jpg",
         time: "۲ ساعت پیش",
         text: "رهن و اجاره آپارتمان تهران",
         number1: "۸۰ متر، محدوده پاسدارن، مکران جنوبی",
@@ -32,7 +33,7 @@ export const ArayListRent = [
 
     {
         id: 4,
-        img: "/rent4.jpg",
+        img: "/Allphoto/rent4.jpg",
         time: "۲ ساعت پیش",
         text: "رهن و اجاره آپارتمان تهران",
         number1: "۱۲۰ متر، محدوه پاسداران، دیباجی",
@@ -42,7 +43,7 @@ export const ArayListRent = [
     },
     {
         id: 5,
-        img: "/rent5.jpg",
+        img: "/Allphoto/rent5.jpg",
         time: "۲ ساعت پیش",
         text: "رهن و اجاره آپارتمان تهران",
         number1: "۱۱۰ متر، هروی، کلید نخورده",
@@ -52,7 +53,7 @@ export const ArayListRent = [
     },
     {
         id: 6,
-        img: "/rent6.jpg",
+        img: "/Allphoto/rent6.jpg",
         time: "۲ ساعت پیش",
         text: "رهن و اجاره آپارتمان تهران",
         number1: "۱۵۰ متر، پاسداران، قبا",
@@ -62,7 +63,7 @@ export const ArayListRent = [
     },
     {
         id: 7,
-        img: "/rent7.jpg",
+        img: "/Allphoto/rent7.jpg",
         time: "۲ ساعت پیش",
         text: "رهن و اجاره آپارتمان تهران",
         number1: "۱۱۰ متر، چیذر، سلیمی",
@@ -72,7 +73,7 @@ export const ArayListRent = [
     },
     {
         id: 8,
-        img: "/rent8.jpg",
+        img: "/Allphoto/rent8.jpg",
         time: "۲ ساعت پیش",
         text: "رهن و اجاره آپارتمان تهران",
         number1: "۱۳۸ متر، ساقدوش، بنی فاطمه، گلستان",
@@ -82,7 +83,7 @@ export const ArayListRent = [
     },
     {
         id: 9,
-        img: "/rent1.jpg",
+        img: "/Allphoto/rent1.jpg",
         time: "۲ ساعت پیش",
         text: "رهن و اجاره آپارتمان تهران",
         number1: "۲۰۰ متر، گیشا بلوار نصر ",
@@ -92,7 +93,7 @@ export const ArayListRent = [
     },
     {
         id: 10,
-        img: "/rent2.jpg",
+        img: "/Allphoto/rent2.jpg",
         time: "۲ ساعت پیش",
         text: "رهن و اجاره آپارتمان تهران",
         number1: "۹۵ متر، مرزداران خیابان آزادی",
@@ -103,7 +104,7 @@ export const ArayListRent = [
     },
     {
         id: 11,
-        img: "/rent3.jpg",
+        img: "/Allphoto/rent3.jpg",
         time: "۲ ساعت پیش",
         text: "رهن و اجاره آپارتمان تهران",
         number1: "۸۰ متر، محدوده پاسدارن، مکران جنوبی",
@@ -114,7 +115,7 @@ export const ArayListRent = [
     },
     {
         id: 12,
-        img: "/rent4.jpg",
+        img: "/Allphoto/rent4.jpg",
         time: "۲ ساعت پیش",
         text: "رهن و اجاره آپارتمان تهران",
         number1: "۱۲۰ متر، محدوه پاسداران، دیباجی",
@@ -125,7 +126,7 @@ export const ArayListRent = [
     },
     {
         id: 13,
-        img: "/rent5.jpg",
+        img: "/Allphoto/rent5.jpg",
         time: "۲ ساعت پیش",
         text: "رهن و اجاره آپارتمان تهران",
         number1: "۱۱۰ متر، هروی، کلید نخورده",
@@ -136,7 +137,7 @@ export const ArayListRent = [
     },
     {
         id: 14,
-        img: "/rent6.jpg",
+        img: "/Allphoto/rent6.jpg",
         time: "۲ ساعت پیش",
         text: "رهن و اجاره آپارتمان تهران",
         number1: "۱۵۰ متر، پاسداران، قبا",
@@ -146,7 +147,7 @@ export const ArayListRent = [
     },
     {
         id: 15,
-        img: "/rent7.jpg",
+        img: "/Allphoto/rent7.jpg",
         time: "۲ ساعت پیش",
         text: "رهن و اجاره آپارتمان تهران",
         number1: "۱۱۰ متر، چیذر، سلیمی",
@@ -156,7 +157,7 @@ export const ArayListRent = [
     },
     {
         id: 16,
-        img: "/rent8.jpg",
+        img: "/Allphoto/rent8.jpg",
         time: "۲ ساعت پیش",
         text: "رهن و اجاره آپارتمان تهران",
         number1: "۱۳۸ متر، ساقدوش، بنی فاطمه، گلستان",
@@ -166,7 +167,7 @@ export const ArayListRent = [
     },
     {
         id: 17,
-        img: "/rent5.jpg",
+        img: "/Allphoto/rent5.jpg",
         time: "۲ ساعت پیش",
         text: "رهن و اجاره آپارتمان تهران",
         number1: "۱۱۰ متر، هروی، کلید نخورده",
@@ -176,7 +177,7 @@ export const ArayListRent = [
     },
     {
         id: 18,
-        img: "/rent6.jpg",
+        img: "/Allphoto/rent6.jpg",
         time: "۲ ساعت پیش",
         text: "رهن و اجاره آپارتمان تهران",
         number1: "۱۵۰ متر، پاسداران، قبا",

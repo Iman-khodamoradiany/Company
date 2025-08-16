@@ -54,7 +54,7 @@ function CustomDropdown({ option, TextDefulte }) {
         </div>
       </div>
       {isOpen && (
-        <div className="w-[140px] my-7  mr-10 z-10  border-[2px] border-blue-400 shadow-[0px_0px_0px_3px_#0085FF30]  bg-white rounded-lg">
+        <div className="w-[140px] my-5   z-10  border-[2px] border-blue-400 shadow-[0px_0px_0px_3px_#0085FF30]  bg-white rounded-lg">
           <ul className=" w-[140px] h-[100px] [direction:rtl]  overflow-y-auto scrollbar-custom  ">
             {option.map((item, index) => (
               <div
