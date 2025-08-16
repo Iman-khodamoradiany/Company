@@ -1,6 +1,7 @@
 import { MapContainer, Marker, Popup, TileLayer, useMapEvents } from "react-leaflet";
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet'
+import LinkPage from "../../Atom/LinkPage/LinkPage";
 
 function CreateMap({ click = false, items }) {
     const Clickhandler = () => {
@@ -32,12 +33,18 @@ function CreateMap({ click = false, items }) {
             {items.length >= 1 ? (
                 items.map((item) => (
                     <Marker position={item.address} icon={customicon}>
-                        <Popup>{item.number1}</Popup>
+                        <Popup>
+                            <LinkPage To={`/RentHome/${item.id}`}>
+                                {item.number1}
+                            </LinkPage>
+                        </Popup>
                     </Marker>
                 ))
             ) :
                 <Marker position={items.address} icon={customicon2}>
-                    <Popup>{items.number1}</Popup>
+                    <LinkPage>
+                        <Popup>{items.number1}</Popup>
+                    </LinkPage>
                 </Marker>
             }
             {click ? <Clickhandler /> : ''}

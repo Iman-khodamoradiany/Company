@@ -8,7 +8,7 @@ import PageRents from "./Pages/PageRents/PageRents"
 export const MyContext = createContext()
 
 function App() {
-  const [PopUp, setPopUp] = useState(false)
+  const [PopUp, setPopUp] = useState('2')
   const [Token, setToken] = useState(false);
   const [Card , setCard] = useState(false)
   const [Report , setReport] = useState(false)

@@ -35,7 +35,7 @@ function ListUnder() {
                   <Text>{item.text2}</Text>
                 </div>
               </div>
-              <Button className=" w-full bg-[#CB1B1B] text-[#FFFFFF] rounded-[8px] py-[10px] flex items-center justify-center ">
+              <Button className="w-full transition-all duration-200 hover:bg-white hover:text-[#CB1B1B] border bg-[#CB1B1B] text-[#FFFFFF] rounded-[8px] py-[10px] flex items-center justify-center ">
                 {item.button}
               </Button>
             </div>

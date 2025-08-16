@@ -41,7 +41,7 @@ function SliderHome() {
             {AraySlider.map((item) => (
               <SwiperSlide
                 key={item.id}
-                className=" bg-[#F9F9F9] rounded-[10px] border-[#E1E1E1] pb-4 border-[1px] "
+                className=" bg-[#F9F9F9] cursor-pointer rounded-[10px] border-[#E1E1E1] pb-4 border-[1px] "
               >
                 <div
                   dir="rtl"
