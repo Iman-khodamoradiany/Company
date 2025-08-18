@@ -30,7 +30,7 @@ function InputRent() {
     }
 
     return (
-        <div className="w-1/2  bg-white relative flex items-center justify-end  h-[65px] gap-2 border-[#ADADAD]  rounded-[8px]   ">
+        <div className="w-1/2  bg-white relative flex items-center justify-end  h-[60px] gap-2 border-2 border-[#ADADAD]  rounded-[8px]   ">
             <Input onKeyDown={(e) => HandelInput(e)} onChange={(e) => setValue(e.target.value)} value={Value} placeholder="شهر مورد نظر را اضافه کنید" className="w-full px-[45px] rounded-xl focus:ring-4 h-full text-[#505050] focus:border-[#2F80ED] focus:shadow-[#5094ee1e] focus:shadow-md border outline-none [direction:rtl]   " />
             <div className="absolute px-4">
                 <Icon Name="Search" />

@@ -4,6 +4,8 @@ import HomePage from "./Pages/HomePage/HomePage"
 import { Route, Routes } from "react-router"
 import Page2Homes from "./Pages/Page2Homes/Page2Homes"
 import PageRents from "./Pages/PageRents/PageRents"
+import ParentReal from "./Commponents/Ui/Molecules/RealStatePage/ParentReal"
+import RealStateOrganisms from "./Commponents/Ui/Organisms/RealStatePageOrganism/RealStateOrgainsms"
 
 export const MyContext = createContext()
 
@@ -22,6 +24,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path='/RentHome/:id' element={<Page2Homes />} />
           <Route path="/PageRents" element={<PageRents/>} />
+          <Route path="Amlak" element={<RealStateOrganisms/>}/>
           <Route path="/But" element={<h1>iman</h1>} />
         </Routes>
       </Layout>
