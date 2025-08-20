@@ -1,14 +1,12 @@
-import { use, useContext, useState } from "react";
+import {  useContext, useState } from "react";
 import Button from "../../Atom/Button/Button";
 import Input from "../../Atom/Input/Input";
 import Text from "../../Atom/Text/Text";
 import { MyContext } from "../../../../App";
 
-function TitelInput({SC , setSC , setNumber , Number}) {
+function TitelInput({ setSC ,setshaw, setNumber , Number}) {
     const {PopUp , setPopUp} = useContext(MyContext)
     const [Rules, setRules] = useState(true)
-    const text = 'asdfh';
-
     function confirmNumber() {
         if (Number != '' && Rules == false) {
             return false
@@ -18,11 +16,14 @@ function TitelInput({SC , setSC , setNumber , Number}) {
     }
 
     function handelButton(){
+        setshaw("1")
+        setPopUp("2")
         setSC(true)
+    
     }
 
     return (
-        <div onClick={(e) => e.stopPropagation()} className={`${SC ? 'hidden' : 'flex'}  h-[380px] z-20 pt-7  justify-center items-center flex-col bg-white w-1/2 px-4 rounded-xl border-3 gap-5`}>
+        <div onClick={(e) => e.stopPropagation()} className={`${PopUp=="1" ? 'flex' : 'hidden'}  h-[380px] z-20 pt-7  justify-center items-center flex-col bg-white w-1/2 px-4 rounded-xl border-3 gap-5`}>
             <div className="text-center flex justify-between w-[90%] h-full items-center pb-6 flex-col gap-5">
                 <Text style={'font-bold text-[1.5vw] text-[#212121]'}>ورود</Text>
                 <div className="text-[#353535] flex justify-between items-center flex-col gap-1">

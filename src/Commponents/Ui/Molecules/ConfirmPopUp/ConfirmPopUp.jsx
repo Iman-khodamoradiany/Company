@@ -6,11 +6,11 @@
     import Icon from "../../Atom/Icon/Icon";
     import { MyContext } from "../../../../App";
 
-    function ConfirmPopUp({ SC, setSC, Number }) {
+    function ConfirmPopUp({ SC,setshaw, setSC, Number }) {
         const [Inputs, setInputs] = useState(new Array(5).fill(''))
         const { min, sec } = useTimer(2)
         const [Error, setError] = useState(true)
-        const { PopUp, setPopUp , setToken } = useContext(MyContext)
+        const { PopUp, setPopUp , setToken , Save } = useContext(MyContext)
 
         function InputHandler(e, index) {
             if (isNaN(e.target.value)) return false;
@@ -33,10 +33,13 @@
             if (Inputs.join('').length <= 4) {
                 alert("Enter code")
             } else {
-                if (Inputs.join('') == "12345") {
-                    setSC(false)
-                    setPopUp(!PopUp)
-                    setToken(true)
+                if (Inputs.join('') == "11111") {
+                   if(Save==true){
+                     setPopUp("3")
+                   }else{
+                    setPopUp("0")
+                   }
+                    setshaw("2")
 
                 } else {
                     setError(!Error)
@@ -44,7 +47,7 @@
             }
         }
         return (
-            <div className={`${SC ? 'flex' : 'hidden'} h-[380px] z-20  justify-center items-center flex-col bg-white w-1/2 px-4 rounded-xl border-3 gap-5`} dir="rtl">
+            <div className={`${PopUp=="2" ? 'flex' : 'flex'} h-[380px] z-20  justify-center items-center flex-col bg-white w-1/2 px-4 rounded-xl border-3 gap-5`} dir="rtl">
                 <div onClick={(e) => e.stopPropagation()} className="bg-white w-[90%] h-full flex justify-between pb-6 pt-6 items-center flex-col">
                     <div>
                         <Text style={'text-[1.5vw] font-bold'}>کد تائید</Text>
