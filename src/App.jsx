@@ -10,15 +10,19 @@ import RealStateOrganisms from "./Commponents/Ui/Organisms/RealStatePageOrganism
 export const MyContext = createContext()
 
 function App() {
-  const [PopUp, setPopUp] = useState('2')
+  const [PopUp, setPopUp] = useState("3")
   const [Token, setToken] = useState(false);
   const [Card , setCard] = useState(false)
   const [Report , setReport] = useState(false)
   const [Title , setTitle] = useState(false)
+  const [Save , setSave] = useState(false)
+  const [City, setCity] = useState("لطفاً شهر مورد نظر را انتخاب کنید");
+  const [Get, setGet] = useState();
+  const [Distri, setDistri] = useState("لطفاً منطقه مورد نظر را انتخاب کنید");
 
   return (
     <>
-      <MyContext.Provider value={{ PopUp, setPopUp, Token, setToken , Card , setCard, Report , setReport , Title , setTitle }}>
+      <MyContext.Provider value={{ PopUp, setPopUp,Save , setSave, Token,Get,setGet, City,setCity,Distri,setDistri, setToken , Card , setCard, Report , setReport , Title , setTitle }}>
           <Layout>
         <Routes>
           <Route path="/" element={<HomePage />} />

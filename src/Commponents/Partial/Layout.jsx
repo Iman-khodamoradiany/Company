@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import Footer from "../Ui/Organisms/Footer/Footer"
 import Navbar from "../Ui/Organisms/Navbar/Navbar"
 
