@@ -6,6 +6,8 @@ import Page2Homes from "./Pages/Page2Homes/Page2Homes"
 import PageRents from "./Pages/PageRents/PageRents"
 import ParentReal from "./Commponents/Ui/Molecules/RealStatePage/ParentReal"
 import RealStateOrganisms from "./Commponents/Ui/Organisms/RealStatePageOrganism/RealStateOrgainsms"
+import DeatilsRealState from "./Pages/DetailsRealState/DetailsRealState"
+import AdvicerPageOrgainsms from "./Commponents/Ui/Organisms/AdvicerPage/AdvicerPageOrganisms"
 
 export const MyContext = createContext()
 
@@ -15,17 +17,19 @@ function App() {
   const [Card , setCard] = useState(false)
   const [Report , setReport] = useState(false)
   const [Title , setTitle] = useState(false)
+  const [header , setheader] = useState()
 
   return (
     <>
-      <MyContext.Provider value={{ PopUp, setPopUp, Token, setToken , Card , setCard, Report , setReport , Title , setTitle }}>
+      <MyContext.Provider value={{ PopUp, setPopUp, Token, setToken , Card , setCard, Report , setReport , Title , setTitle , header , setheader }}>
           <Layout>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path='/RentHome/:id' element={<Page2Homes />} />
           <Route path="/PageRents" element={<PageRents/>} />
-          <Route path="Amlak" element={<RealStateOrganisms/>}/>
-          <Route path="/But" element={<h1>iman</h1>} />
+          <Route path="/Amlak" element={<RealStateOrganisms/>}/>
+          <Route path="/RealState/:id" element={<DeatilsRealState/>}/>
+          <Route path="/Advicer" element={<AdvicerPageOrgainsms/>} />
         </Routes>
       </Layout>
 
