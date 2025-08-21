@@ -18,7 +18,7 @@ function StageSix() {
           اضافه کردن عکس و ویدئو باعث افزایش بازدید آگهی شما می‌شود.
         </Text>
         <Text style="text-[1.1vw] text-[#909090]  ">
-          فرمت عکس‌ها باید webp، jpg، jpeg یا png باشد.{" "}
+          فرمت عکس‌ها باید webp، jpg، jpeg یا png باشد.
         </Text>
         <div className="w-full grid grid-cols-3 justify-between gap-3 ">
           <UploadImg />

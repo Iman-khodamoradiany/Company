@@ -15,6 +15,9 @@ function UploadVideo() {
   const Choose = () => {
     Inputref.current.click();
   };
+  const Choose2 = () => {
+    setselect("")
+  };
 
   return (
     <div className=" [direction:rtl] flex items-start  justify-center flex-col  ">
@@ -45,7 +48,7 @@ function UploadVideo() {
               style={{ display: "none" }}
               ref={Inputref}
             />
-            <Button onClick={Choose}>حذف ویدئو</Button>
+            <Button onClick={Choose2}>حذف ویدئو</Button>
           </div>
         </>
       )}

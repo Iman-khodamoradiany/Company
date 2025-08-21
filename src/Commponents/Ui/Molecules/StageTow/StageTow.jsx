@@ -85,7 +85,7 @@ function StageTow() {
               placeholder="مثلاً ۲ میلیون تومان"
             />
 
-            {error.text1 && <Text>{error.text1}</Text>}
+            {error.text1 && <Text style="text-[#ED2E2E] " >{error.text1}</Text>}
           </div>
           <div className="w-full flex flex-col items-end ">
             <InputStage
@@ -95,7 +95,7 @@ function StageTow() {
               value={formData.text2}
               onChange={handelChange}
             />
-            {error.text2 && <Text>{error.text2}</Text>}
+            {error.text2 && <Text style="text-[#ED2E2E] " >{error.text2}</Text>}
           </div>
         </div>
         <Convertible />

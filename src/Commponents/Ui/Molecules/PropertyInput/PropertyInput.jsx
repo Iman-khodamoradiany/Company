@@ -29,10 +29,10 @@ function PropertyInput() {
       errors.text1 = ".فیلد نام ضرورت دارد ";
     }
     if (!data.text2) {
-      errors.text2 = ".فیلد خیابان فرعی/کوچه ضرورت دارد ";
+      errors.text2 = ".فیلد نام و نام خانوادگی ضرورت دارد ";
     }
     if (!data.text3) {
-      errors.text3 = ".فیلد خیابان فرعی/کوچه ضرورت دارد ";
+      errors.text3 = ".فیلد رمز ضرورت دارد ";
     }
     return errors;
   };
@@ -51,13 +51,11 @@ function PropertyInput() {
   return (
     <div className="w-[70%] flex flex-col items-center justify-center  ">
       <div className="w-full flex flex-col items-center justify-center  ">
-        <div
-          className="w-[350px] px-[10px] py-[20px] bg-white rounded-xl border-[#ADADAD] border  hover:ring-4 hover:ring-[#2F80ED30] hover:border-[#2F80ED] flex items-center justify-between [direction:rtl] mb-3"
-        >
+        <div className="w-[350px] px-[10px] py-[20px] bg-white rounded-xl border-[#ADADAD] border  hover:ring-4 hover:ring-[#2F80ED30] hover:border-[#2F80ED] flex items-center justify-between [direction:rtl] mb-3">
           <div className="w-full flex items-center  justify-center gap-3 text-[#505050]">
             <Icon Name="user" />
             <Input
-              placeholder="خیابان اصلی را وارد کنید"
+              placeholder=" نام را وارد کنید"
               className="w-full outline-none Remove_Icon"
               value={formData.text1}
               onChange={handelChange}
@@ -70,7 +68,7 @@ function PropertyInput() {
           </Button>
         </div>
         <div className="w-[80%] mb-3 flex items-center justify-end">
-          {error.text1 && <Text>{error.text1}</Text>}
+          {error.text1 && <Text style="text-[#ED2E2E] ">{error.text1}</Text>}
         </div>
       </div>
 
@@ -79,7 +77,7 @@ function PropertyInput() {
           <div className="w-full flex items-center justify-center gap-3 text-[#505050]">
             <Icon Name="user" />
             <Input
-              placeholder="خیابان فرعی / کوچه را وارد کنید"
+              placeholder="   نام و نام خانوادگی را وارد کنید"
               className="w-full outline-none Remove_Icon"
               value={formData.text2}
               onChange={handelChange}
@@ -92,7 +90,7 @@ function PropertyInput() {
           </Button>
         </div>
         <div className="w-[80%] mb-3 flex items-center justify-end">
-          {error.text2 && <Text>{error.text2}</Text>}
+          {error.text2 && <Text style="text-[#ED2E2E] ">{error.text2}</Text>}
         </div>
       </div>
 
@@ -101,20 +99,20 @@ function PropertyInput() {
           <div className="w-full flex items-center justify-center gap-3 text-[#505050]">
             <Icon Name="keys" />
             <Input
-              placeholder="خیابان فرعی / کوچه را وارد کنید"
+              placeholder="  رمز را وارد کنید"
               className="w-full outline-none Remove_Icon"
               value={formData.text3}
               onChange={handelChange}
               name="text3"
-              type={icon3 == true ? "password" : "text"}
+              type={icon3 == true ? "text" :"password" }
             />
           </div>
           <Button onClick={() => seticon3(!icon3)}>
-            <Icon Name={icon3 ? "eyeActive" : "eye"} />
+            <Icon Name={icon3 ? "eye" :"eyeActive" } />
           </Button>
         </div>
         <div className="w-[80%] mb-3 flex items-center justify-end">
-          {error.text3 && <Text>{error.text3}</Text>}
+          {error.text3 && <Text style="text-[#ED2E2E] ">{error.text3}</Text>}
         </div>
       </div>
 

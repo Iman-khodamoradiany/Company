@@ -20,9 +20,9 @@ function HomePage() {
         {ButtonEJ ? <RentButton /> : <DefaultHome />}
       </section>
 
-      {/* <div  className={`h-[100vh] fixed  z-50 w-full top-0 justify-center items-center bg-[#F9F9F9]`}>
+      <div  className={`h-[100vh] fixed  z-50 w-full top-0 justify-center items-center bg-[#F9F9F9]`}>
               <StartRegister/>
-      </div> */}
+      </div>
       
     </Ejare.Provider>
   );

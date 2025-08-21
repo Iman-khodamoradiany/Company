@@ -61,7 +61,7 @@ function StageOne() {
             onChange={handelChange}
             name="text2"
           />
-          {error.text2 && <Text>{error.text2}</Text>}
+          {error.text2 && <Text style="text-[#ED2E2E] " >{error.text2}</Text>}
         </div>
         <div className="w-full flex flex-col items-end">
           <InputStage
@@ -71,7 +71,7 @@ function StageOne() {
             onChange={handelChange}
             name="text1"
           />
-          {error.text1 && <Text>{error.text1}</Text>}
+          {error.text1 && <Text style="text-[#ED2E2E] " >{error.text1}</Text>}
         </div>
       </div>
 

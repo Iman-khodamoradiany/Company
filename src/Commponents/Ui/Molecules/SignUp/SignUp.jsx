@@ -4,6 +4,8 @@ import { useContext, useState } from "react"
 import ConfirmPopUp from "../ConfirmPopUp/ConfirmPopUp"
 import Property from './../Property/Property';
 import StartRegister from "../../Organisms/StartRegister/StartRegister";
+import EndRegister from "../EndRegister/EndRegister";
+import Business_Card from './../Business_Card/Business_Card';
 
 
 function SignUp() {
@@ -12,7 +14,6 @@ function SignUp() {
     const [SC, setSC] = useState(null)
     const [Number, setNumber] = useState()
     const [shaw, setshaw] = useState("off")
-    console.log(PopUp);
     
 
 
@@ -52,12 +53,13 @@ function SignUp() {
                 {PopUp=="9" && <StartRegister/> }
             </div>
 
-            {/* <div className={`h-[100vh] ${Card ? 'flex' : 'hidden'} fixed flex z-20 w-full top-0 justify-center items-center bg-[rgba(0,0,0,0.54)]`}>
-                <Business_Card />
-            </div> */}
+            <div  className={`h-[100vh] fixed ${PopUp=="10" ? 'flex' : 'hidden'} z-50 w-full top-0 justify-center items-center bg-[#F9F9F9]`}>
+                {PopUp=="10" && <EndRegister/> }
+            </div>
 
-           
-
+            <div className={`h-[100vh] ${Card ? 'flex' : 'hidden'} fixed flex z-20 w-full top-0 justify-center items-center bg-[rgba(0,0,0,0.54)]`}>
+                <Business_Card/>
+            </div>
         </>
 
     )

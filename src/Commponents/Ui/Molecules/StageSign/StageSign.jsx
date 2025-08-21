@@ -15,39 +15,39 @@ function StageSign() {
     { id: 9 },
   ];
   return (
-    <div className="w-full flex justify-center items-center  transition-[4s]  ">
+    <div className="w-full flex justify-center items-center     ">
       <div className="w-[80%] h-[2px] flex justify-between  items-center gap-[4 vw] [direction:rtl] bg-[#E1E1E1]  ">
         {ArayStageSign.map((item) => (
           <div className={`  flex justify-center items-center  `}>
             {item.id !== 4 && (
               <div
-                className={`w-[80px] h-[2px] flex justify-between  items-center gap-[4 vw] [direction:rtl]  transition-[4s]  ${
+                className={`w-[80px]  h-[2px] flex justify-between  items-center gap-[4 vw] [direction:rtl]    ${
                   PopUp == item.id
-                    ? "bg-[#F66262]"
+                    ? "bg-[#F66262] "
                     : PopUp > item.id
-                    ? "bg-[#F66262]"
+                    ? "bg-[#F66262] "
                     : ""
                 }   `}
               ></div>
             )}
             <div className={
                   PopUp >= item.id
-                    ? ` w-[23px] h-[23px]  rounded-full  flex items-center justify-center ${
+                    ? ` w-[23px] h-[23px]    rounded-full  flex items-center justify-center ${
                         PopUp > item.id
-                          ? "bg-[url(/register/Stepper2.png)] bg-center bg-no-repeat bg-cover"
-                          : "bg-[#F66262]"
+                          ? "bg-[url(/register/Stepper2.png)]   bg-center bg-no-repeat bg-cover"
+                          : "bg-[#F66262]  "
                       }  `
-                    : " w-[23px] h-[23px]  rounded-full  bg-[#EDEDED] flex items-center justify-center "
+                    : " w-[23px] h-[23px]   rounded-full  bg-[#EDEDED] flex items-center justify-center "
                 }>
               <div
                 className={
                   PopUp >= item.id
-                    ? ` w-fuul h-full  bg-center rounded-full  bg-no-repeat bg-cover  transition-[4s]  ${
+                    ? ` w-fuul h-full   bg-center rounded-full  bg-no-repeat bg-cover    ${
                         PopUp > item.id
-                          ? "bg-[url(/register/Stepper2.png)]"
-                          : "  loader"
+                          ? "bg-[url(/register/Stepper2.png)]  "
+                          : "  loader "
                       } `
-                    : " w-fuul h-full  rounded-full  bg-[#EDEDED] "
+                    : " w-fuul h-full  rounded-full   bg-[#EDEDED] "
                 }
               ></div>
             </div>

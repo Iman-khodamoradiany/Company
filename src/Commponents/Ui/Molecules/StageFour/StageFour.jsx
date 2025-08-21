@@ -70,7 +70,7 @@ function StageFour() {
             text=" سرویس بهداشتی "
             placeholder="تعداد سرویس بهداشتی را وارد کنید"
           />
-          {error.text1 && <Text>{error.text1}</Text>}
+          {error.text1 && <Text style="text-[#ED2E2E] ">{error.text1}</Text>}
         </div>
 
         <div className="w-full flex flex-col items-end">
@@ -81,7 +81,7 @@ function StageFour() {
             text="پارکینگ"
             placeholder="تعداد پارکینگ‌ را بنویسید"
           />
-          {error.text2 && <Text>{error.text2}</Text>}
+          {error.text2 && <Text style="text-[#ED2E2E] ">{error.text2}</Text>}
         </div>
 
         <div className="w-full flex flex-col items-end justify-center ">
@@ -99,7 +99,7 @@ function StageFour() {
             text="انباری"
             placeholder="تعداد انباری را بنویسید"
           />
-          {error.text3 && <Text>{error.text3}</Text>}
+          {error.text3 && <Text style="text-[#ED2E2E] ">{error.text3}</Text>}
         </div>
         <div className="w-full flex flex-col items-end justify-center ">
           <div className="text-[#353535] text-[1.2vw] font-meduim  ">
@@ -116,7 +116,7 @@ function StageFour() {
             text="آسانسور"
             placeholder="تعداد آسانسور را مشخص کنید"
           />
-          {error.text4 && <Text>{error.text4}</Text>}
+          {error.text4 && <Text style="text-[#ED2E2E] ">{error.text4}</Text>}
         </div>
 
         <div className="w-full flex flex-col items-end justify-center ">
