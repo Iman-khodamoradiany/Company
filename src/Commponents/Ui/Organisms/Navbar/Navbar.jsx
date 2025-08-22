@@ -11,7 +11,7 @@ import { useLocation } from "react-router"
 function Navbar() {
     const id = useLocation();
 
-    const { PopUp, setPopUp, Token ,setSave ,header } = useContext(MyContext)
+    const { PopUp, setPopUp, Token ,setSave ,   } = useContext(MyContext)
     const handel=()=>{
         setSave(true)
         setPopUp("1")
@@ -31,7 +31,7 @@ function Navbar() {
                 {Token ? <Button className="flex justify-center items-center gap-2 text-[#505050]"><Icon Name={'Profile'}></Icon><Text>پویا موحد</Text></Button> : <Button onClick={() => setPopUp("1")} className={'text-[1.2vw] text-[#505050] font-bold'}>ورود</Button>}
                 <Button onClick={handel} className={'text-[1vw] font-bold border-[1px] border-[#CB1B1B] text-[#CB1B1B] hover:bg-[#CB1B1B] hover:text-white transition-all duration-200 ease-linear w-[7.5vw] h-[3.5vw] rounded-lg flex justify-center items-center'}>ثبت آگاهی</Button>
             </div>
-            {header}
+            {/* {header} */}
         </nav>
     )
 }

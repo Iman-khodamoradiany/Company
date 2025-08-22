@@ -6,7 +6,7 @@ function Left() {
             <div className="w-[100%] flex  flex-col gap-7 h-[60%]  ">
                 <div className="w-[100%] flex pt-6">
                     <Icon Name={"save"} />
-                    <Icon Name={"done"} />
+                    <Icon Name={"doneee"} />
 
                 </div>
                 <div className="w-[75%] text-[#505050]  flex justify-center flex-col p-10 gap-4 rounded-[16px] border-2 shadow-md border-[#E1E1E1] items-center ">
