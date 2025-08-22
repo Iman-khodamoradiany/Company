@@ -8,19 +8,20 @@ import { useContext } from "react"
 import { MyContext } from "../../../../App"
 import { useState } from "react"
 import { useEffect } from "react"
-import { Link } from "react-router"
+import { Link, Links } from "react-router"
 import { motion } from "framer-motion";
 
 import { BestDevicejs } from "../../../Constans/BestDevice/BestDevicejs"
+import LinkPage from "../../Atom/LinkPage/LinkPage"
 function BestDevicerChild() {
-        const { Card, setCard, setPopUp } = useContext(MyContext);
+    const { Card, setCard, setPopUp } = useContext(MyContext);
     const dispatch = useDispatch();
     const [slice, setslice] = useState(9);
     const [open, setopen] = useState(false);
 
     useEffect(() => {
         if (open) {
-            setslice(2);
+            setslice(12);
         } else {
             setslice(12);
         }
@@ -34,9 +35,9 @@ function BestDevicerChild() {
     return (
         <>
 
-            <div className="w-[100%] flex flex-col justify-end  ">
+            <div className="w-[100%] flex  flex-col justify-end  ">
 
-                <div className=" w-[100%] text-[1.7vw] font-semibold bg-pink-400 flex text-[#353535] justify-end p-1  ">
+                <div className=" w-[100%] text-[1.7vw] font-semibold  flex text-[#353535] justify-end p-1  ">
                     <Text>مشاورین توسی</Text>
                 </div>
                 <div className="w-full  flex flex-col items-center justify-center">
@@ -51,7 +52,7 @@ function BestDevicerChild() {
                                         animate={{ opacity: 1, y: 0 }}
                                         exit={{ opacity: 0, y: -50 }}
                                         transition={{ duration: 0.5, ease: "easeOut" }}
-                                        className="w-[100%]   bg-white mx-auto rounded-[10px] border-[#E1E1E1] border-[2px] shadow-[0px_1px_2px_0px_#0000000D,0px_2px_8px_0px_#00000014]"
+                                        className="w-[100%]   bg-[#F9F9F9] mx-auto rounded-[10px] border-[#E1E1E1] "
                                     >
                                         <Button
                                             onClick={() => HandelButton(item)}
@@ -65,13 +66,30 @@ function BestDevicerChild() {
                                                     />
                                                 </div>
 
-                                                <div className="flex items-center justify-center gap-2">
-                                                    
+                                                <div className="flex  items-center justify-center gap-2">
+
                                                     <Text style="text-[#212121] text-[1.5vw] font-bold text-center ">
+
                                                         {item.name}
+
+                                                        <LinkPage To={"/advicer"}>
+
+                                                        <div className={item.style}>
+
+                                                            <Text>
+
+                                                                {item.name1}
+                                                            </Text>
+                                                            <Text>
+                                                                {item.name2}
+
+                                                            </Text>
+
+                                                        </div>
+                                                        </LinkPage>
                                                     </Text>
                                                 </div>
-                            
+
                                             </div>
                                         </Button>
                                     </motion.div>
@@ -80,9 +98,9 @@ function BestDevicerChild() {
                         </AnimatePresence>
                     </div>
                 </div>
-                </div>
+            </div>
         </>
-            
-            )
+
+    )
 }
-            export default BestDevicerChild
+export default BestDevicerChild

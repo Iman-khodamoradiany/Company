@@ -6,6 +6,8 @@ import { Ejare } from "../../../../Pages/HomePage/HomePage"
 import { MyContext } from "../../../../App"
 import DeafultHeader from "../DeafultHeader/DeafultHeader"
 import BestDevicerParent from "../../Molecules/DetailsRealStateMolocolues/BestDevicerParent"
+import InformationStateParent from "../../Molecules/DetailsRealStateMolocolues/InformationStateParent"
+import UserIdeaParent from "../../Molecules/DetailsRealStateMolocolues/UsersIdeaParent"
 
 function RealStateDetailsOrgainsms() {
     const location = useLocation()
@@ -25,8 +27,16 @@ function RealStateDetailsOrgainsms() {
                 <RealStateDetailsUnderHeaderParent />
             </div>
 
-            <div className="w-[85%] mx-auto bg-red-500  flex flex-col " >
+            <div className="w-[85%] mx-auto h-[85vh]  flex flex-col " >
                 <BestDevicerParent />
+            </div>
+
+            <div className="w-[85%] mx-auto  flex flex-col ">
+                <InformationStateParent/>
+            </div>
+
+            <div className="w-[85%] mx-auto   flex flex-col " >
+                <UserIdeaParent/>
             </div>
 
         </>
