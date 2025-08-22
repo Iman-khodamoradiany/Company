@@ -1295,7 +1295,7 @@ function Icon({ Name, style, Fill, css }) {
         </svg>
       );
 
-<<<<<<< HEAD
+
     case "eye":
       return <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M10.0009 13.6083C8.00924 13.6083 6.39258 11.9917 6.39258 10C6.39258 8.00833 8.00924 6.39166 10.0009 6.39166C11.9926 6.39166 13.6092 8.00833 13.6092 10C13.6092 11.9917 11.9926 13.6083 10.0009 13.6083ZM10.0009 7.64166C8.70091 7.64166 7.64258 8.7 7.64258 10C7.64258 11.3 8.70091 12.3583 10.0009 12.3583C11.3009 12.3583 12.3592 11.3 12.3592 10C12.3592 8.7 11.3009 7.64166 10.0009 7.64166Z" fill="#505050"/>
@@ -1436,8 +1436,8 @@ return <svg width="35" height="35" viewBox="0 0 48 48" fill="none" xmlns="http:/
 
 
     
-    }
-=======
+    
+
     case "TOSI":
       return (
         <svg width="125" height="100" viewBox="0 0 165 110" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1493,7 +1493,7 @@ return <svg width="35" height="35" viewBox="0 0 48 48" fill="none" xmlns="http:/
       )
 
   }
->>>>>>> feature/DetailsRealState
+
 }
 
 export default Icon;
