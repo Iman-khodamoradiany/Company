@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { MyContext } from "../../../../App";
 import Icon from "../../Atom/Icon/Icon";
 import Img from "../../Atom/Img/Img";
+import Lihidden from './../Lihidden/Lihidden';
 
 function StageSign() {
   const { PopUp } = useContext(MyContext);
@@ -21,21 +22,23 @@ function StageSign() {
           <div className={`  flex justify-center items-center  `}>
             {item.id !== 4 && (
               <div
-                className={`w-[80px]  h-[2px] flex justify-between  items-center gap-[4 vw] [direction:rtl]    ${
+                className={`w-[80px]  h-[2px] flex justify-between  items-center gap-[4 vw] [direction:rtl]  `}
+              >
+                <div className={`w-full h-full  ${
                   PopUp == item.id
-                    ? "bg-[#F66262] "
+                    ? "bg-[#F66262]  Withe  "
                     : PopUp > item.id
                     ? "bg-[#F66262] "
                     : ""
-                }   `}
-              ></div>
+                }`}></div>
+              </div>
             )}
             <div className={
                   PopUp >= item.id
                     ? ` w-[23px] h-[23px]    rounded-full  flex items-center justify-center ${
                         PopUp > item.id
                           ? "bg-[url(/register/Stepper2.png)]   bg-center bg-no-repeat bg-cover"
-                          : "bg-[#F66262]  "
+                          : " BG "
                       }  `
                     : " w-[23px] h-[23px]   rounded-full  bg-[#EDEDED] flex items-center justify-center "
                 }>

@@ -1,4 +1,4 @@
-export const City=[
+export const ArayCity=[
   {
     "id": 1000001001101,
     "name": "اراک",

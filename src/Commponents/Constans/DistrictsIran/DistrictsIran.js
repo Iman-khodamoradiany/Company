@@ -1,4 +1,4 @@
-export const Distri=[
+export const ArayDistri=[
   {
     "id": 1000001002,
     "name": "مرکزی",

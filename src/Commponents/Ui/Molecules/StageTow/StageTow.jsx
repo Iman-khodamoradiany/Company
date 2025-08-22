@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import {
   PropertyType,
   TransactionType,
@@ -12,13 +12,45 @@ import { MyContext } from "../../../../App";
 
 function StageTow() {
   const { PopUp, setPopUp } = useContext(MyContext);
+  const [propertyType, setPropertyType] = useState("");
+const [buildingType, setBuildingType] = useState("");
 
   const [formData, setformData] = useState({
     text1: "",
     text2: "",
   });
+
+  const Win = window.localStorage;
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    Win.removeItem("StageTow");
+    setformData({
+      text1: "",
+      text2: "",
+    });
+  };
+
+  useEffect(() => {
+    const savedData = Win.getItem("StageTow");
+    if (savedData) {
+      try {
+        setformData(JSON.parse(savedData));
+      } catch (err) {
+        console.error(err);
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+     const mergedData = {
+       ...formData,
+       property: propertyType,
+       building: buildingType
+     };
+    Win.setItem("StageTow", JSON.stringify(mergedData));
+  }, [formData,propertyType,buildingType]);
+
   const [error, setError] = useState({});
-  console.log(error);
 
   const handelChange = (e) => {
     const { name, value } = e.target;
@@ -48,7 +80,10 @@ function StageTow() {
   };
 
   return (
-    <div className="w-[80%]  flex flex-col items-end justify-center ">
+    <div
+      onSubmit={handleSubmit}
+      className="w-[80%]  flex flex-col items-end justify-center "
+    >
       <Text style="text-[#353535] text-[1.45vw] py-[40px] ">
         لطفا موارد زیر را تکمیل کنید
       </Text>
@@ -56,20 +91,24 @@ function StageTow() {
       <div className="w-full flex items-center justify-center gap-2">
         <div className=" flex flex-col items-end justify-center ">
           <div className="text-[#353535] text-[1.2vw] font-meduim  ">
-            <Text>نوع ملک</Text>
+            <Text>نوع معامله</Text>
           </div>
           <DropDownStage
             Option={TransactionType}
             TextDefult="لطفاً نوع ملک ر را انتخاب کنید"
+            value={buildingType}
+            onChange={setBuildingType}
           />
         </div>
         <div className="w-full flex flex-col items-end justify-center ">
           <div className="text-[#353535] text-[1.2vw] font-meduim  ">
-            <Text>نوع معامله</Text>
+            <Text>نوع ملک</Text>
           </div>
           <DropDownStage
             Option={PropertyType}
             TextDefult="لطفاً نوع معامله رانتخاب کنید"
+            value={propertyType}
+            onChange={setPropertyType}
           />
         </div>
       </div>
@@ -85,7 +124,7 @@ function StageTow() {
               placeholder="مثلاً ۲ میلیون تومان"
             />
 
-            {error.text1 && <Text style="text-[#ED2E2E] " >{error.text1}</Text>}
+            {error.text1 && <Text style="text-[#ED2E2E] ">{error.text1}</Text>}
           </div>
           <div className="w-full flex flex-col items-end ">
             <InputStage
@@ -95,7 +134,7 @@ function StageTow() {
               value={formData.text2}
               onChange={handelChange}
             />
-            {error.text2 && <Text style="text-[#ED2E2E] " >{error.text2}</Text>}
+            {error.text2 && <Text style="text-[#ED2E2E] ">{error.text2}</Text>}
           </div>
         </div>
         <Convertible />

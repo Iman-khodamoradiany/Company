@@ -6,7 +6,14 @@ import Text from "../../Atom/Text/Text";
 import ScoreBox from "../ScoreBox/ScoreBox";
 
 function WinodowTitleBox() {
-  const { Title, setTitle } = useContext(MyContext);
+  const {  setTitle } = useContext(MyContext);
+
+  
+const NumberPhone=localStorage.getItem("number")
+  const getName=JSON.parse(localStorage.getItem("property"))
+    const aray=getName&&Object.entries(getName)
+    aray&&localStorage.removeItem(aray[2])
+
 
   const ArayIcon = [
     { id: 1, text: "۰۹۱۲۳۴۵۶۷۸۹" },
@@ -26,13 +33,13 @@ function WinodowTitleBox() {
       <Text style="w-full flex items-center justify-center text-[#353535] text-[1vw] py-[20px] ">
         املاک توسی
       </Text>
-      <Text style="w-full flex items-center justify-center text-[#353535] text-[2.1vw] font-bold ">
-        علی پرتو
+      <Text style="w-full flex items-center justify-center text-[#353535] [direction:rtl] gap-2 text-[2.1vw] font-bold ">
+        {aray?aray.slice(0,2).map((item)=><Text>{item[1]}</Text>):" علی پرتو"}
       </Text>
       <div className="w-full flex-col flex items-center justify-center py-[20px] gap-4">
         {ArayIcon.map((item) => (
           <div className="[direction:rtl] gap-2 flex items-center justify-center text-[#353535] text-[1.4vw] ">
-            <Text>{item.text}</Text>
+            <Text>{NumberPhone?NumberPhone:item.text}</Text>
             <Icon Name="Phone2" />
           </div>
         ))}
@@ -42,10 +49,10 @@ function WinodowTitleBox() {
         <Text>شناسه آگهی ملک: </Text>
         <Text style="underline ">۲۳۴۴</Text>
       </div>
-      <Text style="w-full flex items-center justify-center text-[] text-[#909090] ">
+      <Text style="w-full flex items-center justify-center  text-[#909090] ">
         لطفاً این شناسه را هنگام تماس با مشاور به‌یاد داشته باشید
       </Text>
-      <Text style="w-full flex items-center justify-center text-[] text-[#353535] pt-[40px] ">
+      <Text style="w-full flex items-center justify-center text-[#353535] pt-[40px] ">
         چه امتیازی به مشاور املاک توسی می‌دی؟
       </Text>
 
