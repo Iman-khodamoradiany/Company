@@ -1,18 +1,21 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { MyContext } from "../../../../App";
 import Text from "../../Atom/Text/Text";
 import InputStage from "../InputStage/InputStage";
 import ButtonStage from "../ButtonStage/ButtonStage";
 import DropDownStage from "../../../HOC/DropDownStage/DropDownStage";
-import {
-  coolingSystem,
-  FloorMaterial,
-  HeatingSystem,
-  TypeOfToilet,
-} from "../../../Constans/StageFour/StageFour";
+import { ArayTypeOfToilet,
+AraycoolingSystem,
+ArayHeatingSystem,
+ArayFloorMaterial } from './../../../Constans/StageFour/StageFour';
 
 function StageFour() {
   const { PopUp, setPopUp } = useContext(MyContext);
+
+  const [TypeOfToilet, setTypeOfToilet] = useState("");
+  const [coolingSystem, setcoolingSystem] = useState("");
+  const [HeatingSystem, setHeatingSystem] = useState("");
+  const [FloorMaterial, setFloorMaterial] = useState("");
 
   const [formData, setformData] = useState({
     text1: "",
@@ -21,8 +24,38 @@ function StageFour() {
     text4: "",
   });
 
-  const Location=[formData];
-  localStorage.setItem("Location6",JSON.stringify(Location))
+  const Win = window.localStorage;
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    Win.removeItem("StageFour");
+    setformData({
+      text1: "",
+      text2: "",
+    });
+  };
+
+  useEffect(() => {
+    const savedData = Win.getItem("StageFour");
+    if (savedData) {
+      try {
+        setformData(JSON.parse(savedData));
+      } catch (err) {
+        console.error(err);
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    const mergedData = {
+      ...formData,
+      TypeOfToilet: TypeOfToilet,
+      coolingSystem: coolingSystem,
+      HeatingSystem: HeatingSystem,
+      FloorMaterial: FloorMaterial,
+    };
+    Win.setItem("StageFour", JSON.stringify(mergedData));
+  }, [formData, TypeOfToilet, coolingSystem, HeatingSystem, FloorMaterial]);
 
   const [error, setError] = useState({});
 
@@ -60,7 +93,10 @@ function StageFour() {
   };
 
   return (
-    <div className="w-[80%]  flex flex-col items-end justify-center ">
+    <div
+      onSubmit={handleSubmit}
+      className="w-[80%]  flex flex-col items-end justify-center "
+    >
       <Text style="text-[#353535] text-[1.45vw] py-[20px] ">
         لطفا موارد زیر را انتخاب کنید
       </Text>
@@ -92,7 +128,12 @@ function StageFour() {
           <div className="text-[#353535] text-[1.2vw] font-meduim  ">
             <Text>نوع سرویس بهداشتی</Text>
           </div>
-          <DropDownStage Zed="12" Option={TypeOfToilet} TextDefult="فرنگی" />
+          <DropDownStage
+            value={TypeOfToilet}
+            onChange={setTypeOfToilet}
+            Option={ArayTypeOfToilet}
+            TextDefult="فرنگی"
+          />
         </div>
 
         <div className="w-full flex flex-col items-end">
@@ -109,7 +150,12 @@ function StageFour() {
           <div className="text-[#353535] text-[1.2vw] font-meduim  ">
             <Text>سیستم سرمایش</Text>
           </div>
-          <DropDownStage Zed="11" Option={coolingSystem} TextDefult="چیلر" />
+          <DropDownStage
+            value={coolingSystem}
+            onChange={setcoolingSystem}
+            Option={AraycoolingSystem}
+            TextDefult="چیلر"
+          />
         </div>
 
         <div className="w-full flex flex-col items-end">
@@ -128,8 +174,9 @@ function StageFour() {
             <Text>سیستم گرمایش</Text>
           </div>
           <DropDownStage
-            Zed="10"
-            Option={HeatingSystem}
+            value={HeatingSystem}
+            onChange={setHeatingSystem}
+            Option={ArayHeatingSystem}
             TextDefult="رادیاتور"
           />
         </div>
@@ -138,7 +185,12 @@ function StageFour() {
           <div className="text-[#353535] text-[1.2vw] font-meduim  ">
             <Text>جنس کف</Text>
           </div>
-          <DropDownStage Zed="10" Option={FloorMaterial} TextDefult="سرامیک" />
+          <DropDownStage
+            value={FloorMaterial}
+            onChange={setFloorMaterial}
+            Option={ArayFloorMaterial}
+            TextDefult="سرامیک"
+          />
         </div>
       </div>
 

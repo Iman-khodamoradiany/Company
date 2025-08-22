@@ -11,30 +11,40 @@ function PropertyInput() {
   const [icon2, seticon2] = useState();
   const [icon3, seticon3] = useState();
 
-  const [formData, setformData] = useState({
+const [formData, setFormData] = useState({
+  text1: "",
+  text2: "",
+  text3: ""
+});
+
+const Win = window.localStorage;
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+  Win.removeItem("property");
+  setFormData({
     text1: "",
     text2: "",
-    text3: "",
+    text3: ""
   });
-  console.log(formData);
-  
-  
-   const Win=window.localStorage;
-    const handelSubmit=(e)=>{
-      e.preventDefault()
-      Win.clear()
-      setformData("")
-    }
+};
 
-    useEffect(()=>{
-      if(JSON.stringify(Win.getItem("property")))
-        JSON.stringify(setformData(Win.getItem("property")))
-    },[])
-    
-    
-    useEffect(()=>{
-     JSON.stringify(Win.getItem("property"))
-    },[formData])
+useEffect(() => {
+  const savedData = Win.getItem("property");
+  if (savedData) {
+    try {
+      setFormData(JSON.parse(savedData));
+    } catch (err) {
+      console.error(err);
+    }
+  }
+}, []);
+
+useEffect(() => {
+  Win.setItem("property", JSON.stringify(formData));
+}, [formData]);
+
+
       
 
 
@@ -42,7 +52,7 @@ function PropertyInput() {
 
   const handelChange = (e) => {
     const { name, value } = e.target;
-    setformData({ ...formData, [name]: value });
+    setFormData({ ...formData, [name]: value });
   };
 
   const ValidationForm = (data) => {
@@ -71,7 +81,7 @@ function PropertyInput() {
   };
 
   return (
-    <div onSubmit={handelSubmit} className="w-[70%] flex flex-col items-center justify-center  ">
+    <div onSubmit={handleSubmit} className="w-[70%] flex flex-col items-center justify-center  ">
       <div className="w-full flex flex-col items-center justify-center  ">
         <div className="w-[350px] px-[10px] py-[20px] bg-white rounded-xl border-[#ADADAD] border  hover:ring-4 hover:ring-[#2F80ED30] hover:border-[#2F80ED] flex items-center justify-between [direction:rtl] mb-3">
           <div className="w-full flex items-center  justify-center gap-3 text-[#505050]">

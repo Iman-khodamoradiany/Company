@@ -9,6 +9,10 @@ import PropertyInput from "../PropertyInput/PropertyInput";
 function Property() {
   const { PopUp, setPopUp } = useContext(MyContext);
 
+    const getName = JSON.parse(localStorage.getItem("property"));
+  const aray = getName && Object.entries(getName);
+  aray && localStorage.removeItem(aray[2]);
+ 
 
   return (
     <div

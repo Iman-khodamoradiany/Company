@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { MyContext } from "../../../../App";
 import Text from "../../Atom/Text/Text";
 import InputStage from "../InputStage/InputStage";
@@ -14,8 +14,32 @@ function StageTree() {
     text4: "",
   });
 
-  const Location=[formData];
-  localStorage.setItem("Location5",JSON.stringify(Location))
+  const Win = window.localStorage;
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    Win.removeItem("StageTree");
+    setformData({
+      text1: "",
+      text2: "",
+      text3: "",
+      text4: "",
+    });
+  };
+
+  useEffect(() => {
+    const savedData = Win.getItem("StageTree");
+    if (savedData) {
+      try {
+        setformData(JSON.parse(savedData));
+      } catch (err) {
+        console.error(err);
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    Win.setItem("StageTree", JSON.stringify(formData));
+  }, [formData]);
 
   const [error, setError] = useState({});
 
@@ -53,7 +77,7 @@ function StageTree() {
   };
 
   return (
-    <div className="w-[80%]  flex flex-col items-end justify-center ">
+    <div onSubmit={handleSubmit} className="w-[80%]  flex flex-col items-end justify-center ">
       <Text style="text-[#353535] text-[1.45vw] py-[40px] ">
         لطفا موارد زیر را انتخاب کنید
       </Text>
@@ -67,7 +91,7 @@ function StageTree() {
             onChange={handelChange}
             placeholder="تعداد اتاق‌ها را بنویسید "
           />
-          {error.text1 && <Text style="text-[#ED2E2E] " >{error.text1}</Text>}
+          {error.text1 && <Text style="text-[#ED2E2E] ">{error.text1}</Text>}
         </div>
 
         <div className="w-full flex flex-col items-end">
@@ -78,7 +102,7 @@ function StageTree() {
             placeholder=" مساحت ملک خود را وارد کنید  "
             text="متراژ(متر مربع) "
           />
-          {error.text2 && <Text style="text-[#ED2E2E] " >{error.text2}</Text>}
+          {error.text2 && <Text style="text-[#ED2E2E] ">{error.text2}</Text>}
         </div>
 
         <div className="w-full flex flex-col items-end">
@@ -89,7 +113,7 @@ function StageTree() {
             onChange={handelChange}
             placeholder=" طبقه ملک خود را بنویسید  "
           />
-          {error.text3 && <Text style="text-[#ED2E2E] " >{error.text3}</Text>}
+          {error.text3 && <Text style="text-[#ED2E2E] ">{error.text3}</Text>}
         </div>
 
         <div className="w-full flex flex-col items-end">
@@ -100,7 +124,7 @@ function StageTree() {
             placeholder=" طبقه ملک خود را بنویسید  "
             text="طبقه "
           />
-          {error.text4 && <Text style="text-[#ED2E2E] " >{error.text4}</Text>}
+          {error.text4 && <Text style="text-[#ED2E2E] ">{error.text4}</Text>}
         </div>
       </div>
 

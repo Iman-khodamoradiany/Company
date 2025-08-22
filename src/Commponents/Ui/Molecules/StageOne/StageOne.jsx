@@ -1,5 +1,5 @@
-import { useContext, useState } from "react";
-import { City } from "../../../Constans/CitiIran/CitiIran";
+import { useContext, useEffect, useState } from "react";
+import { ArayCity } from "../../../Constans/CitiIran/CitiIran";
 import Text from "../../Atom/Text/Text";
 import ButtonStage from "../ButtonStage/ButtonStage";
 import DropDownCity from "../DropDownCity/DropDownCity";
@@ -9,15 +9,48 @@ import { MyContext } from "../../../../App";
 import { ArayDistri } from "../../../Constans/DistrictsIran/DistrictsIran";
 
 function StageOne() {
-  const { PopUp, setPopUp,  Distri } = useContext(MyContext);
+  const { PopUp, setPopUp,  Distri,City } = useContext(MyContext);
+  
   const [formData, setformData] = useState({
     text1: "",
     text2: "",
   });
-
+  
   const DIstri=Distri=="لطفاً منطقه مورد نظر را انتخاب کنید"?"":Distri;
-  const Location=[formData,{DIstri}];
-  localStorage.setItem("Location3",JSON.stringify(Location))
+  const CIty=City=="لطفاً شهر مورد نظر را انتخاب کنید"?"":City;
+
+  
+  const Win = window.localStorage;
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    Win.removeItem("StageOne");
+    setformData({
+      text1: "",
+      text2: "",
+      text3: ""
+    });
+  };
+  
+  useEffect(() => {
+    const savedData = Win.getItem("StageOne");
+    if (savedData) {
+      try {
+        setformData(JSON.parse(savedData));
+      } catch (err) {
+        console.error(err);
+      }
+    }
+  }, []);
+  
+ useEffect(() => {
+  const mergedData = {
+    ...formData,
+    city: CIty,
+    distri: DIstri
+  };
+  Win.setItem("StageOne", JSON.stringify(mergedData));
+}, [formData, CIty, DIstri]);
+
   
 
   const [error, setError] = useState({});
@@ -47,17 +80,16 @@ function StageOne() {
     if (formData.text1 && formData.text2) {
       setPopUp("5");
     }
-    
   };
 
   return (
-    <div className="w-[80%]  flex flex-col items-end justify-center ">
+    <div onSubmit={handleSubmit} className="w-[80%]  flex flex-col items-end justify-center ">
       <Text style=" text-[#353535] text-[1.45vw] py-[40px] ">
         لطفا موارد زیر را تکمیل کنید
       </Text>
       <div className="w-full flex items-center justify-center gap-5">
         <DropDownDistri Option={ArayDistri} />
-        <DropDownCity Option={City} />
+        <DropDownCity Option={ArayCity} />
       </div>
       <div className="w-full my-10  flex items-center justify-center gap-5  ">
         <div className="w-full flex flex-col items-end">
