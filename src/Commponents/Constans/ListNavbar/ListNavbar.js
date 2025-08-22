@@ -2,6 +2,6 @@ export const ListNavbar = [
     { to: '/PageRents', title: 'اجاره' },
     { to: '/', title: 'خرید' },
     { to: '/Amlak', title: 'املاک و مستغلات' },
-    { to: '/', title: 'مشاورین املاک' },
+    { to: '/advicer', title: 'مشاورین املاک' },
     { to: '/', title: 'اخبار روز' },
 ]

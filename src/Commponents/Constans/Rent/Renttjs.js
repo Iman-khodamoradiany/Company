@@ -1,0 +1,21 @@
+export const Rentjs = [
+    { id: 1, img: "/RealState/1.jpg", title: "رهـن و اجـاره آپارتــمان تهران", address: "۲۰۰ متر، گیشا بلوار نصر ", price1: "۹۰۰ میلیون تومان رهن", price2: "۱۵ میلیون تومان اجاره", time: "۲ ساعت پیش ", isSaved: false },
+    { id: 2, img: "/RealState/2.jpg", title: "رهن و اجاره آپارتـمـان تهران", address: "۹۵ متر، مرزداران خیابان آزادی", price1: "۷۰۰ میلیون تومان رهن", price2: "۳۰ میلیون تومان اجاره", time: "۲ ساعت پیش ", isSaved: false },
+    { id: 3, img: "/RealState/3.jpg", title: "رهن و اجاره آپارتمان تهران", address: "۸۰ متر، محدوده پاسدارن، مکران جنوبی", price1: "۴۰۰ میلیون تومان رهن", price2: "۱۵ میلیون تومان اجاره", time: "۲ ساعت پیش", isSaved: false },
+    { id: 4, img: "/RealState/4.jpg", title: "رهن و اجاره آپارتمان تهران", address: "۱۲۰ متر، محدوه پاسداران، دیباجی     ", price1: "۶۰۰ میلیون تومان رهن", price2: "۳۱ میلیون تومان اجاره", time: "۲ ساعت پیش", isSaved: false },
+    { id: 5, img: "/RealState/5.jpg", title: "رهن و اجاره آپارتمان تهران", address: "۱۱۰ متر، هروی، کلید نخورده ", price1: "۵۰۰ میلیون تومان رهن", price2: "۲۵ میلیون تومان اجاره", time: "۲ ساعت پیش ", isSaved: false },
+    { id: 6, img: "/RealState/6.jpg", title: "رهن و اجاره آپارتمان تهران", address: "۱۵۰ متر، پاسداران، قبا   ", price1: "۵۰۰ میلیون تومان رهن", price2: "۴۰ میلیون تومان اجاره", time: " ۲ ساعت پیش", isSaved: false },
+    { id: 7, img: "/RealState/7.jpg", title: "رهن و اجاره آپارتمان تهران", address: "۱۱۰ متر، چیذر، سلیمی", price1: "۳۰۰ میلیون تومان رهن", price2: "۲۵ میلیون تومان اجاره", time: "۲ ساعت پیش", isSaved: false },
+    { id: 8, img: "/RealState/8.jpg", title: "رهن و اجاره آپارتمان تهران", address: "۱۳۸ متر، ساقدوش، بنی فاطمه، گلستان", price1: "۱ میلیارد تومان رهن", price2: "۳۰ میلیون تومان اجاره", time: " ۲ ساعت پیش", isSaved: false },
+    { id: 9, img: "/RealState/2.jpg", title: "رهن و اجاره آپارتـمـان تهران", address: "۹۵ متر، مرزداران خیابان آزادی", price1: "۷۰۰ میلیون تومان رهن", price2: "۳۰ میلیون تومان اجاره", time: "۲ ساعت پیش ", isSaved: false },
+    { id: 10, img: "/RealState/3.jpg", title: "رهن و اجاره آپارتمان تهران", address: "۸۰ متر، محدوده پاسدارن، مکران جنوبی", price1: "۴۰۰ میلیون تومان رهن", price2: "۱۵ میلیون تومان اجاره", time: "۲ ساعت پیش", isSaved: false },
+    { id: 11, img: "/RealState/4.jpg", title: "رهن و اجاره آپارتمان تهران", address: "۱۲۰ متر، محدوه پاسداران، دیباجی     ", price1: "۶۰۰ میلیون تومان رهن", price2: "۳۱ میلیون تومان اجاره", time: "۲ ساعت پیش", isSaved: false },
+    { id: 12, img: "/RealState/5.jpg", title: "رهن و اجاره آپارتمان تهران", address: "۱۱۰ متر، هروی، کلید نخورده ", price1: "۵۰۰ میلیون تومان رهن", price2: "۲۵ میلیون تومان اجاره", time: "۲ ساعت پیش ", isSaved: false },
+    { id: 13, img: "/RealState/2.jpg", title: "رهن و اجاره آپارتـمـان تهران", address: "۹۵ متر، مرزداران خیابان آزادی", price1: "۷۰۰ میلیون تومان رهن", price2: "۳۰ میلیون تومان اجاره", time: "۲ ساعت پیش ", isSaved: false },
+    { id: 14, img: "/RealState/3.jpg", title: "رهن و اجاره آپارتمان تهران", address: "۸۰ متر، محدوده پاسدارن، مکران جنوبی", price1: "۴۰۰ میلیون تومان رهن", price2: "۱۵ میلیون تومان اجاره", time: "۲ ساعت پیش", isSaved: false },
+    { id: 15, img: "/RealState/4.jpg", title: "رهن و اجاره آپارتمان تهران", address: "۱۲۰ متر، محدوه پاسداران، دیباجی     ", price1: "۶۰۰ میلیون تومان رهن", price2: "۳۱ میلیون تومان اجاره", time: "۲ ساعت پیش", isSaved: false },
+    { id: 16, img: "/RealState/5.jpg", title: "رهن و اجاره آپارتمان تهران", address: "۱۱۰ متر، هروی، کلید نخورده ", price1: "۵۰۰ میلیون تومان رهن", price2: "۲۵ میلیون تومان اجاره", time: "۲ ساعت پیش ", isSaved: false },
+    { id: 17, img: "/RealState/6.jpg", title: "رهن و اجاره آپارتمان تهران", address: "۱۵۰ متر، پاسداران، قبا   ", price1: "۵۰۰ میلیون تومان رهن", price2: "۴۰ میلیون تومان اجاره", time: " ۲ ساعت پیش", isSaved: false },
+    { id: 18, img: "/RealState/7.jpg", title: "رهن و اجاره آپارتمان تهران", address: "۱۱۰ متر، چیذر، سلیمی", price1: "۳۰۰ میلیون تومان رهن", price2: "۲۵ میلیون تومان اجاره", time: "۲ ساعت پیش", isSaved: false },
+
+]

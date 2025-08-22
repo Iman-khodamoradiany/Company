@@ -10,6 +10,7 @@ import LinkPage from "../../Atom/LinkPage/LinkPage"
 import { useLocation } from "react-router" 
 function Navbar() {
     const id = useLocation();
+<<<<<<< HEAD
     const { PopUp, setPopUp, Token ,setSave } = useContext(MyContext)
     const handel=()=>{
         setSave(true)
@@ -31,6 +32,14 @@ function Navbar() {
                 <Button onClick={handel} className={'text-[1vw] font-bold border-[1px] border-[#CB1B1B] text-[#CB1B1B] hover:bg-[#CB1B1B] hover:text-white transition-all duration-200 ease-linear w-[7.5vw] h-[3.5vw] rounded-lg flex justify-center items-center'}>ثبت آگاهی</Button>
             </div>
         </nav>
+=======
+    console.log(id)
+    const { PopUp, setPopUp, Token  ,header} = useContext(MyContext)
+    return (
+      <>
+            {header}
+            </>
+>>>>>>> feature/DetailsRealState
     )
 }
 export default Navbar

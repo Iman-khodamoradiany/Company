@@ -1,6 +1,6 @@
 import ListRentM from "./../../Molecules/ListRentM/ListRentM";
 
-function RentHomeList({CurrantPost,start,end}) {
+function RentHomeList({CurrantPost,start,end,style}) {
   
 
   return (
@@ -11,7 +11,7 @@ function RentHomeList({CurrantPost,start,end}) {
             CurrantPost={CurrantPost}
             start={start}
             end={end}
-            stay="w-full grid grid-cols-2 gap-[20px] mt-5"
+            stay={`w-full  ${style} gap-[20px] mt-5`}
           />
         </div>
       </div>
