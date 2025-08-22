@@ -17,8 +17,11 @@ function StageTow() {
     text1: "",
     text2: "",
   });
+  
+  const Location=[formData];
+  localStorage.setItem("Location4",JSON.stringify(Location))
+
   const [error, setError] = useState({});
-  console.log(error);
 
   const handelChange = (e) => {
     const { name, value } = e.target;

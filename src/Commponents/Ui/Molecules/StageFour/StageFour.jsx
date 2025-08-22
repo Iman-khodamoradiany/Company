@@ -20,6 +20,10 @@ function StageFour() {
     text3: "",
     text4: "",
   });
+
+  const Location=[formData];
+  localStorage.setItem("Location6",JSON.stringify(Location))
+
   const [error, setError] = useState({});
 
   const handelChange = (e) => {

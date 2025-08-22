@@ -9,6 +9,7 @@ import PropertyInput from "../PropertyInput/PropertyInput";
 function Property() {
   const { PopUp, setPopUp } = useContext(MyContext);
 
+
   return (
     <div
       onClick={(e) => e.stopPropagation()}

@@ -1,10 +1,11 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Button from "../../Atom/Button/Button";
 import Input from "../../Atom/Input/Input";
 import Text from "../../Atom/Text/Text";
 import { MyContext } from "../../../../App";
 
 function TitelInput({ setSC, setshaw, setNumber, Number }) {
+  
   const { PopUp, setPopUp } = useContext(MyContext);
   const [Rules, setRules] = useState(true);
   function confirmNumber() {
@@ -14,12 +15,30 @@ function TitelInput({ setSC, setshaw, setNumber, Number }) {
       return true;
     }
   }
-
+  
   function handelButton() {
     setshaw("1");
     setPopUp("2");
     setSC(true);
+    
   }
+  
+  const Win=window.localStorage;
+  const handelSubmit=(e)=>{
+    e.preventDefault()
+    Win.clear()
+    setNumber("")
+  }
+  useEffect(()=>{
+    if(Win.getItem("number"))
+      setNumber(Win.getItem("number"))
+  },[])
+  
+  
+  useEffect(()=>{
+   Win.setItem("number",Number)
+  },[Number])
+  
 
   return (
     <div
@@ -28,7 +47,7 @@ function TitelInput({ setSC, setshaw, setNumber, Number }) {
         PopUp == "1" ? "flex" : "hidden"
       }  h-[380px] z-20 pt-7  justify-center items-center flex-col bg-white w-1/2 px-4 rounded-xl border-3 gap-5`}
     >
-      <div className="text-center flex justify-between w-[90%] h-full items-center pb-6 flex-col gap-5">
+      <div onSubmit={handelSubmit} className="text-center flex justify-between w-[90%] h-full items-center pb-6 flex-col gap-5">
         <Text style={"font-bold text-[1.5vw] text-[#212121]"}>ورود</Text>
         <div className="text-[#353535] flex justify-between items-center flex-col gap-1">
           <Text>به سقفینو خوش آمدید</Text>
@@ -42,7 +61,7 @@ function TitelInput({ setSC, setshaw, setNumber, Number }) {
             <div className="w-[95%]">
               <Input
                 type={"number"}
-                onChange={(e) => setNumber(e.target.value)}
+                onChange={(e)=>setNumber(e.target.value)}
                 className={
                   "Remove_Icon w-full focus:ring-4 focus:ring-[#2F80ED30] h-[40px] border-2 rounded-lg px-2 focus:border-[#2F80ED] outline-none"
                 }
@@ -68,9 +87,10 @@ function TitelInput({ setSC, setshaw, setNumber, Number }) {
             <Button
               onClick={handelButton}
               disabled={confirmNumber()}
+              type="submit"
               className={`w-full disabled:bg-[#9e5252]  h-[50px] bg-[#CB1B1B] rounded-md text-white`}
             >
-              ورود{" "}
+              ورود
             </Button>
           </div>
         </div>

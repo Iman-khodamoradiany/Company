@@ -5,15 +5,21 @@ import ButtonStage from "../ButtonStage/ButtonStage";
 import DropDownCity from "../DropDownCity/DropDownCity";
 import DropDownDistri from "../DropDownDistri/DropDownDistri";
 import InputStage from "../InputStage/InputStage";
-import { Distri } from "./../../../Constans/DistrictsIran/DistrictsIran";
 import { MyContext } from "../../../../App";
+import { ArayDistri } from "../../../Constans/DistrictsIran/DistrictsIran";
 
 function StageOne() {
-  const { PopUp, setPopUp } = useContext(MyContext);
+  const { PopUp, setPopUp,  Distri } = useContext(MyContext);
   const [formData, setformData] = useState({
     text1: "",
     text2: "",
   });
+
+  const DIstri=Distri=="لطفاً منطقه مورد نظر را انتخاب کنید"?"":Distri;
+  const Location=[formData,{DIstri}];
+  localStorage.setItem("Location3",JSON.stringify(Location))
+  
+
   const [error, setError] = useState({});
 
   const handelChange = (e) => {
@@ -41,6 +47,7 @@ function StageOne() {
     if (formData.text1 && formData.text2) {
       setPopUp("5");
     }
+    
   };
 
   return (
@@ -49,7 +56,7 @@ function StageOne() {
         لطفا موارد زیر را تکمیل کنید
       </Text>
       <div className="w-full flex items-center justify-center gap-5">
-        <DropDownDistri Option={Distri} />
+        <DropDownDistri Option={ArayDistri} />
         <DropDownCity Option={City} />
       </div>
       <div className="w-full my-10  flex items-center justify-center gap-5  ">

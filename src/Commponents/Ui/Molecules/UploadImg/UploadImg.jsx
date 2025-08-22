@@ -14,6 +14,20 @@ function UploadImg() {
     }
   }
 
+const Location = select;
+
+let previousLocations = JSON.parse(localStorage.getItem("Location7"));
+if (!Array.isArray(previousLocations)) {
+  previousLocations = [];
+}
+if (!previousLocations.includes(Location)) {
+  previousLocations.push(Location);
+}
+localStorage.setItem("Location7", JSON.stringify(previousLocations));
+
+
+
+
   const Choose = () => {
     Inputref.current.click();
   };

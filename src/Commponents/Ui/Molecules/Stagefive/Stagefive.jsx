@@ -31,10 +31,11 @@ function Stagefive() {
               {item.number}
             </Text>
 
-            <Input
-              className="w-full outline-none text-[1.1vw]  text-[#ADADAD] flex items-center justify-center "
-              placeholder="--------------------------------------------------------"
-            />
+            <div
+              className="w-full mx-2  text-[1.1vw] bg-[url(/Logo/D2.png)]  bg-no-repeat bg-cover object-cover text-[#ADADAD] flex items-center justify-center "
+            >
+              <Input className="w-full outline-none bg-[#35353500]"   />
+            </div>
           </div>
         ))}
       </div>

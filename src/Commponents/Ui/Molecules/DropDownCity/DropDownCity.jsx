@@ -1,14 +1,12 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import Icon from "../../Atom/Icon/Icon";
 import { MyContext } from "../../../../App";
-import { Distri } from "../../../Constans/DistrictsIran/DistrictsIran";
 import Text from "../../Atom/Text/Text";
 
 function DropDownCity({ Option }) {
   const [isOpen, setIsOpen] = useState(false);
   const [iconToggled, seticonToggled] = useState("down");
   const { City, setCity, setGet, Get } = useContext(MyContext);
-  const [Ca, setCa] = useState(Distri);
 
   const toggle = () => {
     setIsOpen(!isOpen);

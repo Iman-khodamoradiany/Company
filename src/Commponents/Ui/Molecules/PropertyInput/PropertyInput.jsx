@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Button from "../../Atom/Button/Button";
 import Icon from "../../Atom/Icon/Icon";
 import Input from "../../Atom/Input/Input";
@@ -16,6 +16,28 @@ function PropertyInput() {
     text2: "",
     text3: "",
   });
+  console.log(formData);
+  
+  
+   const Win=window.localStorage;
+    const handelSubmit=(e)=>{
+      e.preventDefault()
+      Win.clear()
+      setformData("")
+    }
+
+    useEffect(()=>{
+      if(JSON.stringify(Win.getItem("property")))
+        JSON.stringify(setformData(Win.getItem("property")))
+    },[])
+    
+    
+    useEffect(()=>{
+     JSON.stringify(Win.getItem("property"))
+    },[formData])
+      
+
+
   const [error, setError] = useState({});
 
   const handelChange = (e) => {
@@ -49,7 +71,7 @@ function PropertyInput() {
   };
 
   return (
-    <div className="w-[70%] flex flex-col items-center justify-center  ">
+    <div onSubmit={handelSubmit} className="w-[70%] flex flex-col items-center justify-center  ">
       <div className="w-full flex flex-col items-center justify-center  ">
         <div className="w-[350px] px-[10px] py-[20px] bg-white rounded-xl border-[#ADADAD] border  hover:ring-4 hover:ring-[#2F80ED30] hover:border-[#2F80ED] flex items-center justify-between [direction:rtl] mb-3">
           <div className="w-full flex items-center  justify-center gap-3 text-[#505050]">

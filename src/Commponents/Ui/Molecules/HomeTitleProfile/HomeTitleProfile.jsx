@@ -6,6 +6,9 @@ import { MyContext } from "../../../../App";
 
 function HomeTitleProfile() {
     const { setTitle } = useContext(MyContext);
+    const getName=localStorage.getItem("property")
+    console.log(getName);
+    
   
   return (
     <div className="w-[400px] bg-white border-[1px] flex items-start px-[20px] py-[30px] justify-center border-[#D9D9D9] rounded-[16px] gap-3 ">

@@ -6,7 +6,12 @@ import Text from "../../Atom/Text/Text";
 import ScoreBox from "../ScoreBox/ScoreBox";
 
 function WinodowTitleBox() {
-  const { Title, setTitle } = useContext(MyContext);
+  const {  setTitle } = useContext(MyContext);
+
+  
+const NumberPhone=localStorage.getItem("number")
+
+
 
   const ArayIcon = [
     { id: 1, text: "۰۹۱۲۳۴۵۶۷۸۹" },
@@ -32,7 +37,7 @@ function WinodowTitleBox() {
       <div className="w-full flex-col flex items-center justify-center py-[20px] gap-4">
         {ArayIcon.map((item) => (
           <div className="[direction:rtl] gap-2 flex items-center justify-center text-[#353535] text-[1.4vw] ">
-            <Text>{item.text}</Text>
+            <Text>{NumberPhone?NumberPhone:item.text}</Text>
             <Icon Name="Phone2" />
           </div>
         ))}

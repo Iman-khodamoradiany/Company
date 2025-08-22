@@ -1,5 +1,6 @@
 import { HomePartsImgs } from "./../../../Constans/HomePartsImg/HomePartsImg";
 function HomePartsImg() {
+
   return (
     <div className=" h-full  w-[85%] grid grid-cols-3 gap-[10px] ">
       {HomePartsImgs.map((item) => (

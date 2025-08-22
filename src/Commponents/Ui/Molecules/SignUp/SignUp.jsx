@@ -1,6 +1,6 @@
 import TitelInput from "../TitelInput/TitelInput"
 import { MyContext } from "../../../../App"
-import { useContext, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import ConfirmPopUp from "../ConfirmPopUp/ConfirmPopUp"
 import Property from './../Property/Property';
 import StartRegister from "../../Organisms/StartRegister/StartRegister";
@@ -8,12 +8,17 @@ import EndRegister from "../EndRegister/EndRegister";
 import Business_Card from './../Business_Card/Business_Card';
 
 
-function SignUp() {
 
+function SignUp() {
+    
     const { PopUp, setPopUp, Card,Save } = useContext(MyContext)
     const [SC, setSC] = useState(null)
     const [Number, setNumber] = useState()
     const [shaw, setshaw] = useState("off")
+    
+    const Location=Number
+    localStorage.setItem("Location",JSON.stringify(Location))
+    
     
 
 
@@ -28,7 +33,7 @@ function SignUp() {
 
            {Save? 
             <div  className={`h-[100vh] fixed ${PopUp=="3" ? 'flex' : 'hidden'} z-50 w-full top-0 justify-center items-center bg-[#F9F9F9]`}>
-                {PopUp=="3" && <Property/> }
+                {PopUp=="3" && <Property /> }
             </div>
             :""}
 
