@@ -6,7 +6,7 @@ import { MyContext } from "../../../../App"
 import { ListNavbar } from "../../../Constans/ListNavbar/ListNavbar"
 import { useContext } from "react"
 function DefaulrHeader2() {
-    const {Token} = useContext(MyContext)
+    const {Token } = useContext(MyContext)
     return (
 
         <nav className={`flex justify-between items-center z-20 w-full left-[50%] top-[35px] rounded-0 bg-[#F9F9F9] mx-auto px-5 py-4 mt-10 rounded-0 lg:w-[85%]  lg:top-[50px] lg:rounded-xl `} dir="rtl">
@@ -23,6 +23,8 @@ function DefaulrHeader2() {
                 {Token ? <Button className="flex justify-center items-center gap-2 text-[#505050]"><Icon Name={'Profile'}></Icon><Text>پویا موحد</Text></Button> : <Button onClick={() => setPopUp(!PopUp)} className={'text-[1.2vw] text-[#505050] font-bold'}>ورود</Button>}
                 <Button className={'text-[1vw] font-bold border-[1px] border-[#CB1B1B] text-[#CB1B1B] hover:bg-[#CB1B1B] hover:text-white transition-all duration-200 ease-linear w-[7.5vw] h-[3.5vw] rounded-lg flex justify-center items-center'}>ثبت آگاهی</Button>
             </div>
+            {/* {header} */}
+
         </nav>
 
     )
