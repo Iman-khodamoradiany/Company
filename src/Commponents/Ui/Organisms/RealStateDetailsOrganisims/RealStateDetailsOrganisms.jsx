@@ -9,7 +9,7 @@ import BestDevicerParent from "../../Molecules/DetailsRealStateMolocolues/BestDe
 import InformationStateParent from "../../Molecules/DetailsRealStateMolocolues/InformationStateParent"
 import UserIdeaParent from "../../Molecules/DetailsRealStateMolocolues/UsersIdeaParent"
 
-function RealStateDetailsOrgainsms() {
+function RealStateDetailsOrgainsms({img,name}) {
     const location = useLocation()
     const { setheader } = useContext(MyContext)
 
@@ -19,11 +19,11 @@ function RealStateDetailsOrgainsms() {
             <div className=" w-[100%]  flex flex-col  mx-auto">
                 <div className=" w-full    ">
 
-                    <RealStateDetailsHeader />
+                    <RealStateDetailsHeader img={img} />
                 </div>
 
             <div className="w-[85%] mx-auto  h-[60vh] flex justify-between ">
-                <RealStateDetailsUnderHeaderParent />
+                <RealStateDetailsUnderHeaderParent name={name} />
             </div>
 
             <div className="w-[85%] mx-auto h-[85vh]  flex flex-col " >

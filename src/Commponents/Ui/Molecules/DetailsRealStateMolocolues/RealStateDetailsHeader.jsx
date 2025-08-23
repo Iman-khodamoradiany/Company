@@ -4,8 +4,9 @@ import Text from "../../Atom/Text/Text"
 import { useContext, useEffect } from "react"
 import { MyContext } from "../../../../App"
 import DeafultHeader from "../../Organisms/DeafultHeader/DeafultHeader"
+import Img from "../../Atom/Img/Img"
 
-function RealStateDetailsHeader() {
+function RealStateDetailsHeader({img}) {
     const location = useLocation()
     const { setheader } = useContext(MyContext)
     useEffect(() => {
@@ -42,7 +43,7 @@ function RealStateDetailsHeader() {
             <div className="flex justify-end  w-full h-[120px]  " >
 
                 <div className=" w-[230px] translate-y-[-65%] mx-[150px] h-[230px] bg-[#F9F9F9] rounded-full  flex justify-center items-center z-50">
-                    <Icon Name="TOSI" className="w-14 h-14 text-black" />
+                    <Img src={img} className="w-14 h-14 text-black" />
                 </div>
             </div>
 
