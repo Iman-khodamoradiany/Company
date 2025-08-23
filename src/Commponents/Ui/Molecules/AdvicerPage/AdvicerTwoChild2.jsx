@@ -90,7 +90,9 @@ function AdvicertwoChild() {
              <div className="w-full  grid grid-cols-4 gap-3">
 
                 {SliderRentUsers.slice(0 , slice).map((item) => (
-                    <div className="w-full   bg-[#FFFFFF] rounded-[10px] border-[#E1E1E1]  border-[2px] shadow-[0px_1px_2px_0px_#0000000D,0px_2px_8px_0px_#00000014]">
+                   <Link to={`/Device/${item.id}`}>
+                   
+                   <div className="w-full   bg-[#FFFFFF] rounded-[10px] border-[#E1E1E1]  border-[2px] shadow-[0px_1px_2px_0px_#0000000D,0px_2px_8px_0px_#00000014]">
                         <div className="w-full  flex flex-col items-center justify-between gap-2 py-[20px]">
                             <div className="   ">
                                 <Img src={item.image} className="w-[120px] h-[120px] rounded-full object-cover flex items-center justify-center " />
@@ -103,6 +105,7 @@ function AdvicertwoChild() {
                             </div>
                         </div>
                     </div>
+                   </Link>
                 ))}
 
              </div>

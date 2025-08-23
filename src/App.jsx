@@ -8,6 +8,7 @@ import ParentReal from "./Commponents/Ui/Molecules/RealStatePage/ParentReal"
 import RealStateOrganisms from "./Commponents/Ui/Organisms/RealStatePageOrganism/RealStateOrgainsms"
 import DeatilsRealState from "./Pages/DetailsRealState/DetailsRealState"
 import AdvicerPageOrgainsms from "./Commponents/Ui/Organisms/AdvicerPage/AdvicerPageOrganisms"
+import DetailsDevice from "./Pages/DetailsDevice/DetailsDevice"
 
 export const MyContext = createContext()
 
@@ -35,6 +36,7 @@ function App() {
           <Route path="/PageRents" element={<PageRents/>} />
           <Route path="/Amlak" element={<RealStateOrganisms/>}/>
           <Route path="/RealState/:id" element={<DeatilsRealState/>}/>
+          <Route path="/Device/:id" element={<DetailsDevice/>}/>
           <Route path="/Advicer" element={<AdvicerPageOrgainsms/>} />
         </Routes>
       </Layout>

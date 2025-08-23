@@ -16,12 +16,11 @@ function RealStateDetailsOrgainsms() {
     return (
         <>
 
-            <div className=" w-[100%]   flex flex-col  mx-auto">
+            <div className=" w-[100%]  flex flex-col  mx-auto">
                 <div className=" w-full    ">
 
                     <RealStateDetailsHeader />
                 </div>
-            </div>
 
             <div className="w-[85%] mx-auto  h-[60vh] flex justify-between ">
                 <RealStateDetailsUnderHeaderParent />
@@ -39,6 +38,7 @@ function RealStateDetailsOrgainsms() {
                 <UserIdeaParent/>
             </div>
 
+            </div>
         </>
     )
 }
