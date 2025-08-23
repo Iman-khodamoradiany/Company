@@ -1,14 +1,14 @@
 import Button from "../../Atom/Button/Button"
 import Icon from "../../Atom/Icon/Icon"
 import Text from "../../Atom/Text/Text"
-function Rigth() {
+function Rigth({name}) {
     return (
         <>
             <div className="w-[100%] flex  flex-col gap-2 h-[90%]  ">
                 <div className="w-[100%]  p-2 pt-2 ">
                    <div className="flex gap-2 font-semibold justify-end items-center text-[#353535] text-[2.3vw]">
                     <Icon   Name={"check"}/>
-                    <Text >املاک توسی</Text>
+                    <Text > {name}</Text>
                    </div>
                 </div>
                 <div className="w-[100%]  p-2 pt-2 text-[#505050] text-[1vw] font-semibold  flex justify-end ">

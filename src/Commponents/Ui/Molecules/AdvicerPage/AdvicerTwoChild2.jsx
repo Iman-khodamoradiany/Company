@@ -34,54 +34,7 @@ function AdvicertwoChild() {
 
     return (
         <>
-            {/* 
-            <div className="w-full  flex flex-col items-center justify-center">
-                
-                <div className="w-full  grid grid-cols-3 gap-3">
-                    <AnimatePresence>
-                        {SliderRentBrands.slice(0, slice).map((item) => (
-                        <Link to={`/RealState/${item.id}`}>
-                            <motion.div
-                                key={item.id}
-                                initial={{ opacity: 0, y: 50 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                exit={{ opacity: 0, y: -50 }}
-                                transition={{ duration: 0.5, ease: "easeOut" }}
-                                className="w-[95%] bg-white mx-auto rounded-[10px] border-[#E1E1E1] border-[2px] shadow-[0px_1px_2px_0px_#0000000D,0px_2px_8px_0px_#00000014]"
-                            >
-                                <Button
-                                    onClick={() => HandelButton(item)}
-                                    className="flex justify-center items-center flex-col w-full z-50"
-                                >
-                                    <div className="w-full flex flex-col items-center justify-center gap-[15px] py-[30px]">
-                                        <div className="w-full flex items-center justify-center">
-                                            <Img
-                                                src={item.img}
-                                                className="flex items-center justify-center"
-                                            />
-                                        </div>
-
-                                        <div className="flex items-center justify-center gap-2">
-                                            <Icon Name={item.icon} />
-                                            <Text style="text-[#212121] text-[1.5vw] font-bold text-center ">
-                                                {item.name}
-                                            </Text>
-                                        </div>
-                                        <Text style="text-[#353535] text-[1.2vw] text-center ">
-                                            {item.text}
-                                        </Text>
-                                        <div className="text-[#717171] text-[1.1vw] text-center flex flex-col gap-4">
-                                            <Text>{item.number1}</Text>
-                                            <Text>{item.number2}</Text>
-                                            <Text>{item.number3}</Text>
-                                        </div>
-                                    </div>
-                                </Button>
-                            </motion.div>
-                        </Link>
-                        ))}
-                    </AnimatePresence>
-                </div> */}
+ 
 
 
 
