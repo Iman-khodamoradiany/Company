@@ -10,6 +10,7 @@ function RealStateDetailsUnderHeaderParent({name}) {
             <div className="  w-[50%]">
                 <Rigth name={name}/>
             </div>
+            
         </>
     )
 }

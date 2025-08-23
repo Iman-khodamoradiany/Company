@@ -23,14 +23,14 @@ function App() {
   const [Get, setGet] = useState();
   const [Distri, setDistri] = useState("لطفاً منطقه مورد نظر را انتخاب کنید");
   const [header , setheader] = useState()
+  const [Shire , setShire] = useState(false)
+  
 
   return (
     <>
-      <MyContext.Provider value={{ PopUp, setPopUp,Save , setSave, Token,Get,setGet, City,setCity,Distri,setDistri, setToken , Card , setCard,  header , setheader, Report , setReport , Title , setTitle }}>
-
-
-          <Layout>
-        <Routes>
+      <MyContext.Provider value={{ PopUp, setPopUp,Save , setSave, Token,Get,setGet, City,setCity,Distri,setDistri, setToken , Card , setCard,  header , setheader, Report , setReport , Title , setTitle,Shire,setShire }}>
+      <Layout>
+         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path='/RentHome/:id' element={<Page2Homes />} />
           <Route path="/PageRents" element={<PageRents/>} />

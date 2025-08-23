@@ -116,7 +116,6 @@ function InformationChild2() {
     }, [open]);
 
     function HandelButton(info) {
-        setPopUp(true);
         setCard(true);
         dispatch(infocard(info));
     }

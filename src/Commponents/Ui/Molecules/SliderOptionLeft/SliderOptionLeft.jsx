@@ -17,11 +17,10 @@ function SliderOptionLeft({
   SlidesPerView,
   ...props
 }) {
-  const { Card, setCard, setPopUp } = useContext(MyContext);
+  const { Card, setCard  } = useContext(MyContext);
   const dispatch = useDispatch();
 
   function HandelButton(info) {
-    setPopUp(true);
     setCard(true);
     dispatch(infocard(info));
   }

@@ -14,6 +14,7 @@ import { motion } from "framer-motion";
 import { BestDevicejs } from "../../../Constans/BestDevice/BestDevicejs"
 import LinkPage from "../../Atom/LinkPage/LinkPage"
 function BestDevicerChild() {
+
     const { Card, setCard, setPopUp } = useContext(MyContext);
     const dispatch = useDispatch();
     const [slice, setslice] = useState(9);
@@ -28,7 +29,6 @@ function BestDevicerChild() {
     }, [open]);
 
     function HandelButton(info) {
-        setPopUp(true);
         setCard(true);
         dispatch(infocard(info));
     }

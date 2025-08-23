@@ -1,7 +1,7 @@
 import { useLocation } from "react-router"
 import RealStateDetailsHeader from "../../Molecules/DetailsRealStateMolocolues/RealStateDetailsHeader"
 import RealStateDetailsUnderHeaderParent from "../../Molecules/DetailsRealStateMolocolues/RealStateDetailsUnderHeaderParent"
-import { useContext, useEffect } from "react"
+import { useContext } from "react"
 import { Ejare } from "../../../../Pages/HomePage/HomePage"
 import { MyContext } from "../../../../App"
 import DeafultHeader from "../DeafultHeader/DeafultHeader"
