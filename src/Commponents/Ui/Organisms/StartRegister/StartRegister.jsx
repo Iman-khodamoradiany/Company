@@ -17,7 +17,7 @@ function StartRegister() {
     <div className="w-[140vh] h-[90vh] bg-white rounded-xl mx-auto my-10 flex items-start justify-between  bg-center bg-contain  bg-no-repeat   ">
       <div className="w-[65%]  flex flex-col items-center justify-start my-[100px] gap-5  ">
         <StageSign />
-        {PopUp == "4" && <StageOne/>}
+        {PopUp == "4" && <StageOne />}
         {PopUp == "5" && <StageTow />}
         {PopUp == "6" && <StageTree />}
         {PopUp == "7" && <StageFour />}
