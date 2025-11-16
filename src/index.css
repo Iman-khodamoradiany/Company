@@ -1,3 +1,128 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: HORIZONTAL;
+  src: url(../public/Font/Shabnam-FD-WOL.ttf);
+}
+
+p {
+  font-family: HORIZONTAL;
+}
+
+a {
+  font-family: HORIZONTAL;
+}
+
+button {
+  font-family: HORIZONTAL;
+}
+option {
+  font-family: HORIZONTAL;
+}
+
+@layer components {
+  .Remove_Icon {
+    @apply [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none;
+  }
+}
+
+@layer utilities {
+  .scrollbar-custom::-webkit-scrollbar {
+    width: 15px;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 8px;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-thumb {
+    background: #adadad;
+    border-radius: 8px;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-thumb:hover {
+    background: #8f8f8f;
+  }
+}
+
+@layer utilities {
+  .scrollbar-custom2::-webkit-scrollbar {
+    width: 15px;
+  }
+
+  .scrollbar-custom2::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
+
+  .scrollbar-custom2::-webkit-scrollbar-thumb {
+    background: #adadad;
+    border-radius: 4px;
+  }
+
+  .scrollbar-custom2::-webkit-scrollbar-thumb:hover {
+    background: #8f8f8f;
+  }
+}
+
+
+@layer utilities {
+  .loader {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      transition: all 8s cubic-bezier(0.075, 0.82, 0.165, 1);
+      background: conic-gradient(
+        from 52.13deg,
+        rgba(239, 187, 187, 0.7) 0deg,
+        rgba(203, 27, 27, 0) 0.04deg,
+        #FFFFFF 162deg,
+        rgba(228, 135, 135, 0.474292) 351deg,
+        rgba(220, 100, 100, 0.321667) 360deg
+      );
+      mask-image: radial-gradient(closest-side, transparent 58%, black 60%);
+      -webkit-mask-image: radial-gradient(closest-side, transparent 60%, black 61%);
+      animation: spin 2s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+}
+
+@layer utilities {
+  .Withe {
+      width: 0px;
+      height: 100%;
+      animation: width 3s linear forwards ;
+
+    }
+
+    @keyframes width {
+      0% { width:5% ; }
+      10% { width:10% ; }
+      20% { width:20% ; }
+      30% { width:30% ; }
+      40% { width:40% ; }
+      50% { width:50% ; }
+      60% { width:60% ; }
+      70% { width:70% ; }
+      80% { width:80% ; }
+      90% { width:90% ; }
+      100% { width: 100%; }
+    }
+}
+
+@layer utilities {
+  .BG {
+    transition: all;
+    transition-duration: 8s;
+      background-color: #F66262;
+    }
+
+}

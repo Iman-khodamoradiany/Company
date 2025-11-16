@@ -1,6 +1,7 @@
-function Input({title , style , type}){
+
+function Input(props){
     return(
-        <input className={style} type={type} placeholder={title}/>
+        <input {...props}/>
     )
 }
 export default Input

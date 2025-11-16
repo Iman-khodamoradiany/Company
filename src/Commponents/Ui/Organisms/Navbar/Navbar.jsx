@@ -1,7 +1,105 @@
+import Icon from "../../Atom/Icon/Icon";
+import Ul from "../../Molecules/Ul/Li";
+import Button from "../../Atom/Button/Button";
+import "./Navbar.css";
+import { useContext } from "react";
+import { MyContext } from "../../../../App";
+import Text from "../../Atom/Text/Text";
+import { ListNavbar } from "../../../Constans/ListNavbar/ListNavbar";
+import LinkPage from "../../Atom/LinkPage/LinkPage";
+import { useLocation } from "react-router";
 function Navbar() {
-    return(
-        <>
-        </>
-    )
+  const id = useLocation();
+  const { PopUp, setPopUp, Token, setSave } = useContext(MyContext);
+  const handel = () => {
+    setSave(true);
+    setPopUp("1");
+  };
+  const handel2 = () => {
+    setSave(false);
+    setPopUp("1");
+  };
+  const getName = JSON.parse(localStorage.getItem("property"));
+  const aray = getName && Object.entries(getName);
+  aray && localStorage.removeItem(aray[2]);
+
+  return (
+    <nav
+      className={`flex justify-between items-center z-10 w-full left-[50%] top-[35px] rounded-0 ${
+        id.pathname != "/"
+          ? "bg-[#F9F9F9] mt-8"
+          : "bg-white lg:absolute lg:translate-x-[-50%] lg:translate-y-[-50%]"
+      } mx-auto   px-5 py-4 rounded-0 lg:w-[85%]  lg:top-[80px] lg:rounded-xl `}
+      dir="rtl"
+    >
+      <div className="w-[25%] block lg:hidden">
+        <Icon Name={"Burger"}></Icon>
+      </div>
+      <div className="flex justify-center items-center gap-10 w-1/2 lg:w-[70%] lg:justify-start">
+        <LinkPage To={"/"}>
+          <Icon style={"w-[100px]"} Name={"Logo"}></Icon>
+        </LinkPage>
+        <Ul
+          style={
+            " hidden lg:flex justify-center items-center gap-6 text-[#505050] Navbarli"
+          }
+          items={ListNavbar}
+          Fal={true}
+        ></Ul>
+      </div>
+      <div className="flex justify-end gap-8  w-[30%]">
+        {aray ? (
+          <Button className=" flex justify-center items-center gap-2 text-[#505050]">
+            <Icon Name={"Profile"}></Icon>
+            <div className="flex gap-1">
+              {aray
+                ? aray.slice(0, 2).map((item) => <Text>{item[1]}</Text>)
+                : " علی پرتو"}
+            </div>
+          </Button>
+        ) : (
+          <Button
+            onClick={handel2}
+            className={"text-[1.2vw] text-[#505050] font-bold"}
+          >
+            ورود
+          </Button>
+        )}
+        <Button
+          onClick={handel}
+          className={
+            "text-[1vw] font-bold border-[1px] border-[#CB1B1B] text-[#CB1B1B] hover:bg-[#CB1B1B] hover:text-white transition-all duration-200 ease-linear w-[7.5vw] h-[3.5vw] rounded-lg flex justify-center items-center"
+          }
+        >
+          ثبت آگاهی
+        </Button>
+      </div>
+    </nav>
+  );
+    // const id = useLocation();
+
+    // const { PopUp, setPopUp, Token ,setSave ,   } = useContext(MyContext)
+    // const handel=()=>{
+    //     setSave(true)
+    //     setPopUp("1")
+    // }
+    // return (
+    //     <nav className={`flex justify-between items-center z-10 w-full left-[50%] top-[35px] rounded-0 ${id.pathname != '/' ? 'bg-[#F9F9F9] mt-8' : 'bg-white lg:absolute lg:translate-x-[-50%] lg:translate-y-[-50%]'} mx-auto   px-5 py-4 rounded-0 lg:w-[85%]  lg:top-[80px] lg:rounded-xl `} dir="rtl">
+    //         <div className="w-[25%] block lg:hidden">
+    //             <Icon Name={'Burger'}></Icon>
+    //         </div>
+    //         <div className="flex justify-center items-center gap-10 w-1/2 lg:w-[75%] lg:justify-start">
+    //             <LinkPage To={'/'}>
+    //                 <Icon style={'w-[100px]'} Name={"Logo"}></Icon>
+    //             </LinkPage>
+    //             <Ul style={' hidden lg:flex justify-center items-center gap-6 text-[#505050] Navbarli'} items={ListNavbar} Fal={true}></Ul>
+    //         </div>
+    //         <div className="flex justify-end gap-8  w-[25%]">
+    //             {Token ? <Button className="flex justify-center items-center gap-2 text-[#505050]"><Icon Name={'Profile'}></Icon><Text>پویا موحد</Text></Button> : <Button onClick={() => setPopUp("1")} className={'text-[1.2vw] text-[#505050] font-bold'}>ورود</Button>}
+    //             <Button onClick={handel} className={'text-[1vw] font-bold border-[1px] border-[#CB1B1B] text-[#CB1B1B] hover:bg-[#CB1B1B] hover:text-white transition-all duration-200 ease-linear w-[7.5vw] h-[3.5vw] rounded-lg flex justify-center items-center'}>ثبت آگاهی</Button>
+    //         </div>
+    //         {/* {header} */}
+    //     </nav>
+    // )
 }
-export default Navbar
+export default Navbar;
